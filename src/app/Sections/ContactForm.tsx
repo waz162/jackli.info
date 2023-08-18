@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 
-// write me a function to submit an email form
+interface FormData {
+  email: string;
+  subject: string;
+  message: string;
+}
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     email: "",
     subject: "",
     message: "",
   });
+
   console.log(formData);
-  const handleSubmit = async (e) => {
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       // Here, you would typically use a library like axios to send the form data to a backend API
@@ -25,6 +31,16 @@ const ContactForm = () => {
       console.error("Error submitting form:", error);
       alert("An error occurred while submitting the form.");
     }
+  };
+
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
   return (
