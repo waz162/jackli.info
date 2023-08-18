@@ -29,12 +29,7 @@ const About: React.FC = () => {
         <AiFillMail />
       </div>
       <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-        <Image
-          src={pic_of_me}
-          layout="fill"
-          objectFit="cover"
-          alt="cartoon avatar"
-        />
+        <Image src={pic_of_me} fill objectFit="cover" alt="cartoon avatar" />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 "use client"; // This is a client component 👈🏽
-import React, { useClient, useState } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Header from "../../src/app/Sections/Header";
 import About from "../../src/app/Sections/About";

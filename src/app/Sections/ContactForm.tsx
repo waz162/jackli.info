@@ -1,10 +1,10 @@
-import React, { useState, ChangeEvent, FormEvent } from "react";
+import React from "react";
 
-interface FormData {
-  email: string;
-  subject: string;
-  message: string;
-}
+// interface FormData {
+//   email: string;
+//   subject: string;
+//   message: string;
+// }
 
 const ContactForm = () => {
   // const [formData, setFormData] = useState<FormData>({
