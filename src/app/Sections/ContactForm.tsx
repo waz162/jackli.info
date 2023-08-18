@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 
 interface FormData {
   email: string;
@@ -7,41 +7,41 @@ interface FormData {
 }
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState<FormData>({
-    email: "",
-    subject: "",
-    message: "",
-  });
+  // const [formData, setFormData] = useState<FormData>({
+  //   email: "",
+  //   subject: "",
+  //   message: "",
+  // });
 
-  console.log(formData);
+  // console.log(formData);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try {
-      // Here, you would typically use a library like axios to send the form data to a backend API
-      // For this example, we'll just simulate a successful submission
-      console.log("Form data:", formData);
-      alert("Form submitted successfully!");
-      setFormData({
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("An error occurred while submitting the form.");
-    }
-  };
+  // const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   try {
+  //     // Here, you would typically use a library like axios to send the form data to a backend API
+  //     // For this example, we'll just simulate a successful submission
+  //     console.log("Form data:", formData);
+  //     alert("Form submitted successfully!");
+  //     setFormData({
+  //       email: "",
+  //       subject: "",
+  //       message: "",
+  //     });
+  //   } catch (error) {
+  //     console.error("Error submitting form:", error);
+  //     alert("An error occurred while submitting the form.");
+  //   }
+  // };
 
-  const handleInputChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+  // const handleInputChange = (
+  //   e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prevData) => ({
+  //     ...prevData,
+  //     [name]: value,
+  //   }));
+  // };
 
   return (
     <section>
