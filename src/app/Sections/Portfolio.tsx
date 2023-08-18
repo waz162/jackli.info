@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import web1 from "../../../public/web1.png";
 import web2 from "../../../public/web2.png";
 import web3 from "../../../public/web3.png";
