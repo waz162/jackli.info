@@ -1,0 +1,12 @@
+{
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.tabSize": 2,
+    "editor.tabCompletion": "on",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    }
+}
