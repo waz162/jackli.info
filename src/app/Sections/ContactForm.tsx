@@ -107,6 +107,7 @@ const ContactForm = () => {
             </button>
           </div>
         </form>
+        <div className="h-16"></div>
       </div>
     </section>
   );
