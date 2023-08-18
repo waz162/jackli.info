@@ -29,6 +29,7 @@ const PortfolioSection: React.FC = () => {
       <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
         <div className="basis-1/3 flex-1">
           <Image
+            alt="web1"
             src={web1}
             className="rounded-lg object-cover"
             width={300}
@@ -38,6 +39,7 @@ const PortfolioSection: React.FC = () => {
         </div>
         <div className="basis-1/3 flex-1">
           <Image
+            alt="web2"
             src={web2}
             className="rounded-lg object-cover"
             width={300}
@@ -47,6 +49,7 @@ const PortfolioSection: React.FC = () => {
         </div>
         <div className="basis-1/3 flex-1">
           <Image
+            alt="web3"
             src={web3}
             className="rounded-lg object-cover"
             width={300}
@@ -56,6 +59,7 @@ const PortfolioSection: React.FC = () => {
         </div>
         <div className="basis-1/3 flex-1">
           <Image
+            alt="web4"
             src={web4}
             className="rounded-lg object-cover"
             width={300}
@@ -65,6 +69,7 @@ const PortfolioSection: React.FC = () => {
         </div>
         <div className="basis-1/3 flex-1">
           <Image
+            alt="web5"
             src={web5}
             className="rounded-lg object-cover"
             width={300}
@@ -74,6 +79,7 @@ const PortfolioSection: React.FC = () => {
         </div>
         <div className="basis-1/3 flex-1">
           <Image
+            alt="web6"
             src={web6}
             className="rounded-lg object-cover"
             width={300}

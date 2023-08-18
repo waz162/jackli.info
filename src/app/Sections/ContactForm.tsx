@@ -34,8 +34,8 @@ const ContactForm = () => {
           Contact Me
         </h2>
         <p className="text-xl py-2 leading-8 text-slate-800 dark:text-slate-400">
-          Reach out if you have questions, ideas, or just want to say hello. I'd
-          love to hear from you!
+          Reach out if you have questions, ideas, or just want to say hello.
+          I&apos;d love to hear from you!
         </p>
         <form action="#" className="space-y-8">
           <div>

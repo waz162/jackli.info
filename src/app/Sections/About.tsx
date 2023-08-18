@@ -20,7 +20,7 @@ const About: React.FC = () => {
       <p className="text-md py-5 leading-8 text-slate-700 dark:text-slate-400 md:text-xl max-w-lg mx-auto">
         Tech enthusiast, code aficionado. From building smarter rain barrels to
         whipping up AI-powered recipes, I bring a dash of innovation to every
-        byte. Let's turn ideas into reality through lines of code!
+        byte. Let&apos;s turn ideas into reality through lines of code!
       </p>
       <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
         <AiFillGithub />
