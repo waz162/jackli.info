@@ -93,7 +93,7 @@ const ContactForm = () => {
             </label>
             <textarea
               id="message"
-              rows="6"
+              rows={6}
               className="block p-2.5 w-full text-sm text-slate-900 rounded-xl shadow-sm border border-slate-300 focus:outline-none focus:ring-teal-500 focus:border-teal-500 dark:bg-slate-800 dark:border-slate-900 dark:placeholder-slate-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500"
               placeholder="Rest of your message here!"
             ></textarea>
