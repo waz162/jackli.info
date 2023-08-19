@@ -6,6 +6,7 @@ import About from "../../src/app/Sections/About";
 import Experience from "../../src/app/Sections/Experience";
 import Portfolio from "../../src/app/Sections/Portfolio";
 import ContactForm from "../../src/app/Sections/ContactForm";
+import Footer from "../../src/app/Sections/Footer";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -18,7 +19,7 @@ export default function Home() {
         <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
       </Head>
 
-      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-slate-900">
         <section className="min-h-screen">
           <Header darkMode={darkMode} setDarkMode={setDarkMode} />
           <About />
@@ -26,6 +27,7 @@ export default function Home() {
         <Experience />
         <Portfolio />
         <ContactForm />
+        <Footer />
       </main>
     </div>
   );
