@@ -18,13 +18,14 @@ const PortfolioSection: React.FC = () => {
     initialIndex: 0,
     cellAlign: "center",
     pageDots: true,
-    autoPlay: 3000,
-    adaptiveHeight: true,
+    // autoPlay: 3000,
+    contains: true,
+    wrapAround: true,
   };
 
   return (
     <div>
-      <div className="py-2 md:py-5 lg:py-8">
+      <div className="py-2 md:py-5 lg:py-8 overflow-hidden">
         <h3 className="text-3xl py-1 dark:text-slate-100">Portfolio</h3>
         <p className="text-md py-2 leading-8 text-gray-800 dark:text-slate-400">
           As a{" "}
