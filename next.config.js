@@ -1,15 +1,25 @@
+// @ts-check
+
 /**
  * @type {import('next').NextConfig}
- */
+ **/
 const nextConfig = {
-  images: { unoptimized: true }
-  // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
-  // trailingSlash: true,
+  /**
+   * Enable static exports for the App Router.
+   *
+   * @see https://nextjs.org/docs/pages/building-your-application/deploying/static-exports
+   */
+  output: 'export',
 
-  // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
-  // skipTrailingSlashRedirect: true,
-
-  // Optional: Change the output directory `out` -> `dist`
+  /**
+   * Disable server-based image optimization. Next.js does not support
+   * dynamic features with static exports.
+   *
+   * @see https://nextjs.org/docs/pages/api-reference/components/image#unoptimized
+   */
+  images: {
+    unoptimized: true
+  }
 }
 
 module.exports = nextConfig
