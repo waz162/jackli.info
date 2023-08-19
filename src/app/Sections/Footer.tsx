@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
@@ -42,10 +43,11 @@ const Footer: React.FC = () => {
         </a>
         .
       </p>
-      <img
-        src="/totorojumping.gif"
-        alt="Totoro Spinning"
-        className="w-20 h-20"
+      <Image
+        src="/totorospinning.gif"
+        alt="Totoro spinning"
+        width={20}
+        height={20}
       />
     </footer>
   );

@@ -1,4 +1,6 @@
 import React from "react";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import Flickity from "react-flickity-component";
 import PortfolioImage from "../Components/PortfolioImage"; // Update the path accordingly
 import web1 from "../../../public/web1.png";
