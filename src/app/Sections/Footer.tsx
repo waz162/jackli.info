@@ -44,10 +44,10 @@ const Footer: React.FC = () => {
         .
       </p>
       <Image
-        src="/totorospinning.gif"
+        src="/totorojumping.gif"
         alt="Totoro spinning"
-        width={20}
-        height={20}
+        width={80}
+        height={80}
       />
     </footer>
   );
