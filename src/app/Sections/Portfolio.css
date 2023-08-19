@@ -1,19 +1,24 @@
 /* Apply grayscale effect on images */
-.project-image {
+.project-image img {
   transition: 0.5s ease;
 }
 
 /* Remove grayscale effect and scale up on hover */
-.project-image:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+@media (min-width: 768px) {
+  .project-image img:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
 
 .flickity-enabled:focus {
     outline: none;
 }
 
-.flickity-slider {
-  align-items: center;
+/* fixes bug on mobile for flickity */
+@media (max-width: 768px) {
+  .no-horizontal-scroll {
+    overflow-x: hidden;
+  }
 }

@@ -18,7 +18,7 @@ const PortfolioSection: React.FC = () => {
     initialIndex: 0,
     cellAlign: "center",
     pageDots: true,
-    // autoPlay: 3000,
+    autoPlay: 3000,
     contains: true,
     wrapAround: true,
   };
@@ -52,21 +52,23 @@ const PortfolioSection: React.FC = () => {
         </p>
       </div>
 
-      <Flickity
-        className={"carousel"} // default ''
-        elementType={"div"} // default 'div'
-        options={flickityOptions} // takes flickity options {}
-        disableImagesLoaded={false} // default false
-        reloadOnUpdate // default false
-        static // default false
-      >
-        <PortfolioImage alt="project" src={web1} />
-        <PortfolioImage alt="web2" src={web2} />
-        <PortfolioImage alt="web3" src={web3} />
-        <PortfolioImage alt="web4" src={web4} />
-        <PortfolioImage alt="web5" src={web5} />
-        <PortfolioImage alt="web6" src={web6} />
-      </Flickity>
+      <div className="no-horizontal-scroll">
+        <Flickity
+          className={"carousel"} // default ''
+          elementType={"div"} // default 'div'
+          options={flickityOptions} // takes flickity options {}
+          disableImagesLoaded={false} // default false
+          reloadOnUpdate // default false
+          static // default false
+        >
+          <PortfolioImage alt="project" src={web1} />
+          <PortfolioImage alt="web2" src={web2} />
+          <PortfolioImage alt="web3" src={web3} />
+          <PortfolioImage alt="web4" src={web4} />
+          <PortfolioImage alt="web5" src={web5} />
+          <PortfolioImage alt="web6" src={web6} />
+        </Flickity>
+      </div>
     </div>
   );
 };

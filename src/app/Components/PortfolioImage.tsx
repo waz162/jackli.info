@@ -10,7 +10,7 @@ interface PortfolioImageProps {
 
 const PortfolioImage: React.FC<PortfolioImageProps> = ({ alt, src }) => {
   return (
-    <div className="basis-1/3 flex-1 mr-20 ">
+    <div className="basis-1/3 flex-1 mr-20 project-image">
       <Image alt={alt} src={src} />
     </div>
   );
