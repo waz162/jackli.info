@@ -1,3 +1,7 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"]
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  "rules": {
+    // Other rules
+    "@next/next/no-img-element": "off"
+  }
 }
