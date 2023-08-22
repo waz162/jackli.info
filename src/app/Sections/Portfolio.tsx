@@ -32,17 +32,17 @@ const PortfolioSection: React.FC = () => {
           <span className="text-teal-500 dark:text-teal-300">
             Software Engineer
           </span>
-          , I&apos;ve shaped my journey through impactful projects. I revamped
-          authentication and built a Content Management System with{" "}
+          , I&apos;ve shaped my journey through impactful projects. In my current role I revamped
+          authentication for our company site and built a Content Management System with{" "}
           <span className="text-teal-500 dark:text-teal-300">
             React, Typescript,
           </span>{" "}
-          and <span className="text-teal-500 dark:text-teal-300">MariaDB</span>{" "}
-          , enhancing content workflows. Agile-driven, I&apos;ve resolved bugs,
+          and <span className="text-teal-500 dark:text-teal-300">MariaDB</span>{""}
+          , enhancing content workflows. In agile bi-weekly sprints, I&apos;ve resolved bugs,
           improved UI, and explored diverse tech like{" "}
           <span className="text-teal-500 dark:text-teal-300">AWS</span> and{" "}
           <span className="text-teal-500 dark:text-teal-300">Snowflake</span>.
-          I&apos;ve worn many hats so take a look at what I&apos;ve done.
+          for backend work. I&apos;ve worn many hats so take a look at what I&apos;ve done.
           Projects like{" "}
           <span className="text-teal-500 dark:text-teal-300">CookGPT</span> and{" "}
           <span className="text-teal-500 dark:text-teal-300">

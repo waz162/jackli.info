@@ -1,47 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
+import useWeb3forms from "@web3forms/react";
+import { useForm } from "react-hook-form";
 
-// interface FormData {
-//   email: string;
-//   subject: string;
-//   message: string;
-// }
+interface FormData {
+  name: string;
+  checkbox: boolean;
+}
+
 
 const ContactForm = () => {
-  // const [formData, setFormData] = useState<FormData>({
-  //   email: "",
-  //   subject: "",
-  //   message: "",
-  // });
+  const [accessKey] = useState("786f4ca4-46cc-40ac-9771-2766e950d64a");
+  interface FormData {
+    email: string;
+    subject: string;
+    message: string;
+  }
 
-  // console.log(formData);
+  const {
+    formState: {errors},
+    register,
+    handleSubmit,
+    reset,
+  } = useForm<FormData>();
 
-  // const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   try {
-  //     // Here, you would typically use a library like axios to send the form data to a backend API
-  //     // For this example, we'll just simulate a successful submission
-  //     console.log("Form data:", formData);
-  //     alert("Form submitted successfully!");
-  //     setFormData({
-  //       email: "",
-  //       subject: "",
-  //       message: "",
-  //     });
-  //   } catch (error) {
-  //     console.error("Error submitting form:", error);
-  //     alert("An error occurred while submitting the form.");
-  //   }
-  // };
-
-  // const handleInputChange = (
-  //   e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  // ) => {
-  //   const { name, value } = e.target;
-  //   setFormData((prevData) => ({
-  //     ...prevData,
-  //     [name]: value,
-  //   }));
-  // };
+  const { submit } = useWeb3forms<FormData>({
+    access_key: accessKey,
+    settings: {
+      from_name: "Acme Inc",
+      subject: "New Contact Message from your website",
+    },
+    onSuccess: (successMessage) => {
+      alert(successMessage);
+      reset();
+    },
+    onError: (errorMessage) => {
+      alert(errorMessage);
+    }
+  });
 
   return (
     <section>
@@ -67,7 +62,14 @@ const ContactForm = () => {
               className="shadow-sm border border-slate-300 text-slate-900 text-sm rounded-xl focus:outline-none focus:ring-teal-500 focus:border-teal-500 block w-full p-2.5 dark:bg-slate-800 dark:border-slate-900 dark:placeholder-slate-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500 dark:shadow-sm-light"
               placeholder="name@example.com"
               required
+              {...register('email', {
+                required: true,
+                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+              })}
             />
+            {errors.email && (
+              <p className='error-msg'>Please enter a valid email</p>
+            )}
           </div>
           <div>
             <label
@@ -91,21 +93,36 @@ const ContactForm = () => {
             >
               Your message
             </label>
-            <textarea
+            <input
               id="message"
-              rows={6}
-              className="block p-2.5 w-full text-sm text-slate-900 rounded-xl shadow-sm border border-slate-300 focus:outline-none focus:ring-teal-500 focus:border-teal-500 dark:bg-slate-800 dark:border-slate-900 dark:placeholder-slate-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500"
+              {...register('message', {
+                required: true,
+                minLength: 3,
+              })}
+              type="text"
+              // className="block p-2.5 w-full text-sm text-slate-900 rounded-xl shadow-sm border border-slate-300 focus:outline-none focus:ring-teal-500 focus:border-teal-500 dark:bg-slate-800 dark:border-slate-900 dark:placeholder-slate-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500"
               placeholder="Rest of your message here!"
-            ></textarea>
+            ></input>
           </div>
           <div className="flex justify-center items-center">
             <button
               type="submit"
               className="bg-gradient-to-r from-teal-500 to-cyan-500 text-slate-100 px-4 py-2 border-none rounded-md  dark:text-slate-200"
+              onClick={handleSubmit(submit)}
             >
               Send message
             </button>
           </div>
+        {/* {isSubmitSuccessful && isSuccess && (
+          <div className="mt-3 text-sm text-center text-green-500">
+            {message || "Success. Message sent successfully"}
+          </div>
+        )}
+        {isSubmitSuccessful && !isSuccess && (
+          <div className="mt-3 text-sm text-center text-red-500">
+            {message || "Something went wrong. Please try later."}
+          </div>
+        )} */}
         </form>
         <div className="h-16"></div>
       </div>

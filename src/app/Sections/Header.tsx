@@ -8,8 +8,8 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
   return (
-    <nav className="py-8 sm:py-10 sm:mb-12 flex justify-between">
-      <h1 className="text-xl font-burtons dark:text-slate-100">
+    <nav className="py-8 sm:py-10 sm:mb-12 flex text-gray-800 justify-between">
+      <h1 className="text-xl font-burtons text-slate-800 dark:text-slate-100">
         developedbyJack
       </h1>
       <ul className="flex items-center">
@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
             />
           ) : (
             <BsFillMoonStarsFill
-              className="cursor-pointer text-2xl"
+              className="cursor-pointer text-gray-800 text-2xl"
               onClick={() => setDarkMode(!darkMode)}
             />
           )}
