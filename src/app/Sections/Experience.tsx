@@ -25,7 +25,7 @@ const Experience: React.FC = () => {
           incididunt. Voluptate deserunt occaecat laborum ut elit anim.
         </p>
       </div>
-      <div className="lg:flex gap-10">
+      <div className="md:flex gap-10 items-center justify-center">
         <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-slate-800">
           <Image
             src={design}
@@ -35,18 +35,17 @@ const Experience: React.FC = () => {
             className="mx-auto"
           />
           <h3 className="text-lg font-medium pt-8 pb-2 dark:text-slate-100">
-            Beautifully Designed Code
+            LANGUAGES
           </h3>
-          <p className="py-2 dark:text-slate-400">
-            Creating elegant code suited for your needs.
-          </p>
           <h4 className="py-4 text-teal-600 dark:text-teal-300">
             TechStack I use
           </h4>
+          <p className="text-gray-800 py-1 dark:text-slate-400">Javascript</p>
           <p className="text-gray-800 py-1 dark:text-slate-400">Typescript</p>
-          <p className="text-gray-800 py-1 dark:text-slate-400">React</p>
+          <p className="text-gray-800 py-1 dark:text-slate-400">HTML</p>
+          <p className="text-gray-800 py-1 dark:text-slate-400">CSS</p>
           <p className="text-gray-800 py-1 dark:text-slate-400">Python</p>
-          <p className="text-gray-800 py-1 dark:text-slate-400">AWS</p>
+          <p className="text-gray-800 py-1 dark:text-slate-400">PHP</p>
         </div>
         <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-slate-800">
           <Image
@@ -57,18 +56,15 @@ const Experience: React.FC = () => {
             className="mx-auto"
           />
           <h3 className="text-lg font-medium pt-8 pb-2 dark:text-slate-100">
-            Beauitfully Designed Code
+            FRAMEWORKS
           </h3>
-          <p className="py-2 dark:text-slate-400">
-            Creating elegant code suited for your needs.
-          </p>
           <h4 className="py-4 text-teal-600 dark:text-teal-300">
             TechStack I use
           </h4>
           <p className="text-gray-800 py-1 dark:text-slate-400">Typescript</p>
-          <p className="text-gray-800 py-1 dark:text-slate-400">React</p>
-          <p className="text-gray-800 py-1 dark:text-slate-400">Python</p>
-          <p className="text-gray-800 py-1 dark:text-slate-400">AWS</p>
+          <p className="text-gray-800 py-1 dark:text-slate-400">Next.js</p>
+          <p className="text-gray-800 py-1 dark:text-slate-400">Angular</p>
+          <p className="text-gray-800 py-1 dark:text-slate-400">Node</p>
         </div>
         <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-slate-800">
           <Image
@@ -79,18 +75,19 @@ const Experience: React.FC = () => {
             className="mx-auto"
           />
           <h3 className="text-lg font-medium pt-8 pb-2 dark:text-slate-100">
-            Beauitfully Designed Code
+            TOOLS
           </h3>
-          <p className="py-2 dark:text-slate-400">
-            Creating elegant code suited for your needs.
-          </p>
           <h4 className="py-4 text-teal-600 dark:text-teal-300">
             TechStack I use
           </h4>
-          <p className="text-gray-800 py-1 dark:text-slate-400">Typescript</p>
-          <p className="text-gray-800 py-1 dark:text-slate-400">React</p>
-          <p className="text-gray-800 py-1 dark:text-slate-400">Python</p>
+          <p className="text-gray-800 py-1 dark:text-slate-400">Git & Github</p>
+          <p className="text-gray-800 py-1 dark:text-slate-400">
+            Chrome DevTools
+          </p>
+          <p className="text-gray-800 py-1 dark:text-slate-400">Postman</p>
+          <p className="text-gray-800 py-1 dark:text-slate-400">MongoDB</p>
           <p className="text-gray-800 py-1 dark:text-slate-400">AWS</p>
+          <p className="text-gray-800 py-1 dark:text-slate-400">Docker</p>
         </div>
       </div>
     </div>

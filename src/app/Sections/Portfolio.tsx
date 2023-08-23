@@ -32,18 +32,20 @@ const PortfolioSection: React.FC = () => {
           <span className="text-teal-500 dark:text-teal-300">
             Software Engineer
           </span>
-          , I&apos;ve shaped my journey through impactful projects. In my current role I revamped
-          authentication for our company site and built a Content Management System with{" "}
+          , I&apos;ve shaped my learning through some pretty cool projects. In
+          my current role I leveraged modern tech and frameworks to upgrade and
+          replace many outdated sites and frameworks. Using{" "}
           <span className="text-teal-500 dark:text-teal-300">
-            React, Typescript,
+            React and Typescript
           </span>{" "}
-          and <span className="text-teal-500 dark:text-teal-300">MariaDB</span>{""}
-          , enhancing content workflows. In agile bi-weekly sprints, I&apos;ve resolved bugs,
-          improved UI, and explored diverse tech like{" "}
+          allowed for old workflows to be speedier and cleaner for countless
+          internal teams. <br />
+          In agile bi-weekly sprints, I&apos;ve resolved bugs, improved UI, and
+          explored diverse tech like{" "}
           <span className="text-teal-500 dark:text-teal-300">AWS</span> and{" "}
-          <span className="text-teal-500 dark:text-teal-300">Snowflake</span>.
-          for backend work. I&apos;ve worn many hats so take a look at what I&apos;ve done.
-          Projects like{" "}
+          <span className="text-teal-500 dark:text-teal-300">Snowflake</span>{" "}
+          for backend work. I&apos;ve worn many hats so take a look at what
+          I&apos;ve done! Projects like{" "}
           <span className="text-teal-500 dark:text-teal-300">CookGPT</span> and{" "}
           <span className="text-teal-500 dark:text-teal-300">
             Smart Rain Barrel

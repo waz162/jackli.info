@@ -5,7 +5,8 @@ const Footer: React.FC = () => {
   return (
     <footer className="text-gray-400 py-4 text-center flex items-center justify-center">
       <p className="text-sm">
-        Roughly designed in{" "}
+        Whoa! You made it all the way to the bottom. This page was roughly
+        designed in{" "}
         <a
           href="https://www.figma.com/"
           className="font-semibold text-slate-400 hover:text-teal-500 dark:hover:text-teal-300 focus-visible:text-teal-500 dark:focus-visible:text-teal-300"
@@ -32,7 +33,7 @@ const Footer: React.FC = () => {
         >
           Tailwind CSS
         </a>
-        , deployed with{" "}
+        , and deployed with{" "}
         <a
           href="https://pages.github.com/"
           className="font-semibold text-slate-400 hover:text-teal-500 dark:hover:text-teal-300 focus-visible:text-teal-500 dark:focus-visible:text-teal-300"
@@ -41,7 +42,7 @@ const Footer: React.FC = () => {
         >
           GitHub Pages
         </a>
-        .
+        . Here's a cute Totoro for your troubles:
       </p>
       <Image
         src="/totorojumping.gif"

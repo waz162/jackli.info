@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
 import { useForm } from "react-hook-form";
 import useWeb3forms from "@web3forms/react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+// Import the CSS file
+import "./ContactForm.css";
 
 interface FormData {
   email: string;
@@ -9,6 +11,7 @@ interface FormData {
   message: string;
 }
 const Home: NextPage = () => {
+  // for submit message
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
   const [message, setMessage] = useState<string>("");
@@ -20,17 +23,29 @@ const Home: NextPage = () => {
     reset,
   } = useForm<FormData>();
 
+  const resetStatus = () => {
+    setIsSuccess(false);
+    setIsError(false);
+    setMessage("");
+  };
+
   const { submit } = useWeb3forms<FormData>({
     // this is fine because key is just hash for email
     access_key: "786f4ca4-46cc-40ac-9771-2766e950d64a",
     settings: {
       from_name: "Jack's Personal Website",
     },
+
     onSuccess: (successMessage) => {
       setMessage(successMessage);
       setIsError(false);
       setIsSuccess(true);
       reset();
+
+      setTimeout(() => {
+        setIsSuccess(false);
+        setIsError(false);
+      }, 5000);
     },
     onError: (errorMessage) => {
       setMessage(errorMessage);
