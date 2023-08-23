@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import { useForm } from "react-hook-form";
 import useWeb3forms from "@web3forms/react";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
+import { AiFillLinkedin, AiOutlineMail, AiFillPhone } from "react-icons/ai";
 // Import the CSS file
 import "./ContactForm.css";
 
@@ -22,12 +23,6 @@ const Home: NextPage = () => {
     handleSubmit,
     reset,
   } = useForm<FormData>();
-
-  const resetStatus = () => {
-    setIsSuccess(false);
-    setIsError(false);
-    setMessage("");
-  };
 
   const { submit } = useWeb3forms<FormData>({
     // this is fine because key is just hash for email
@@ -56,8 +51,17 @@ const Home: NextPage = () => {
 
   return (
     <div className="py-1 text-slate-800 dark:text-slate-100">
-      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-slate-900 dark:text-white">
-        Contact Me
+      <h2 className="mb-4 text-4xl tracking-tight font-extrabold flex justify-center items-center text-slate-900 dark:text-white">
+        <span className="flex-grow">Contact Me</span>
+        <a href="mailto:jack.li19996@gmail.com" className="text-slate-800 dark:text-slate-400">
+          <AiOutlineMail className="w-8 h-8 inline-block" />
+        </a>
+        <a href="https://www.linkedin.com/in/jackli140/" target="_blank" rel="noopener noreferrer" className="text-slate-800 dark:text-slate-400 ml-4">
+          <AiFillLinkedin className="w-8 h-8 inline-block" />
+        </a>
+        <a href="tel:8564921879" className="text-slate-800 dark:text-slate-400 ml-4">
+          <AiFillPhone className="w-8 h-8 inline-block" />
+        </a>
       </h2>
       <p className="text-xl py-2 leading-8 text-slate-800 dark:text-slate-400">
         Reach out if you have questions, ideas, or just want to say hello.

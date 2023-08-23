@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: "Hi welcome to my website!",
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default function RootLayout({
   children,
 }: {

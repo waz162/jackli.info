@@ -25,7 +25,7 @@ const Experience: React.FC = () => {
           incididunt. Voluptate deserunt occaecat laborum ut elit anim.
         </p>
       </div>
-      <div className="md:flex gap-10 items-center justify-center">
+      <div className="lg:flex gap-10 items-center justify-center">
         <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-slate-800">
           <Image
             src={design}
@@ -65,6 +65,7 @@ const Experience: React.FC = () => {
           <p className="text-gray-800 py-1 dark:text-slate-400">Next.js</p>
           <p className="text-gray-800 py-1 dark:text-slate-400">Angular</p>
           <p className="text-gray-800 py-1 dark:text-slate-400">Node</p>
+          <p className="text-gray-800 py-1 dark:text-slate-400">AJAX</p>
         </div>
         <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-slate-800">
           <Image
