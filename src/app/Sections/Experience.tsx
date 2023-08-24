@@ -1,14 +1,19 @@
+"use client";
+
 import React from "react";
+import SectionHeading from "../Components/SectionHeading";
+import { useSectionInView } from "../Lib/hooks";
 import Image from "next/legacy/image";
 import design from "../../../public/design.png";
 import code from "../../../public/code.png";
 import consulting from "../../../public/consulting.png";
 
 const Experience: React.FC = () => {
+  const { ref } = useSectionInView("Experience", 0.5);
   return (
-    <div>
+    <section ref={ref} id="experience" className="scroll-mt-28">
       <div>
-        <h3 className="text-3xl py-1 dark:text-slate-100">My Experience</h3>
+        <SectionHeading>My Experience</SectionHeading>
         <p className="text-md py-2 leading-8 text-gray-800 dark:text-slate-400">
           Officia pariatur Lorem eiusmod id ut nostrud ex exercitation non
           fugiat excepteur. Voluptate{" "}
@@ -91,7 +96,7 @@ const Experience: React.FC = () => {
           <p className="text-gray-800 py-1 dark:text-slate-400">Docker</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

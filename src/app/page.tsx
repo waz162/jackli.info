@@ -1,18 +1,17 @@
 "use client"; // This is a client component 👈🏽
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
-import Header from "../../src/app/Sections/Header";
-import About from "../../src/app/Sections/About";
-import Experience from "../../src/app/Sections/Experience";
-import Portfolio from "../../src/app/Sections/Portfolio";
-import ContactForm from "../../src/app/Sections/ContactForm";
-import Footer from "../../src/app/Sections/Footer";
+import Header from "../app/Sections/Header";
+import About from "../app/Sections/About";
+import Experience from "../app/Sections/Experience";
+import Portfolio from "../app/Sections/Portfolio";
+import Contact from "../app/Sections/Contact";
+import Footer from "../app/Sections/Footer";
+import Skills from "../app/Sections/Skills";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div>
       <Head>
         <title>Jack Li Portfolio</title>
         <meta name="description" content="Jack Li Portfolio" />
@@ -21,12 +20,13 @@ export default function Home() {
 
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-slate-900">
         <section className="min-h-screen">
-          <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Header />
           <About />
         </section>
         <Experience />
+        <Skills />
         <Portfolio />
-        <ContactForm />
+        <Contact />
         <Footer />
       </main>
     </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 const Footer: React.FC = () => {
   return (
     <footer className="text-gray-400 py-4 text-center flex items-center justify-center">
-      <p className="text-sm">
+      <p className="text-xs sm:text-sm">
         Whoa! You made it all the way to the bottom. This page was roughly
         designed in{" "}
         <a
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
         >
           GitHub Pages
         </a>
-        . Here's a cute Totoro for your troubles:
+        .<br /> Here's a cute Totoro for your troubles:
       </p>
       <Image
         src="/totorojumping.gif"
