@@ -3,8 +3,9 @@ import { useForm } from "react-hook-form";
 import useWeb3forms from "@web3forms/react";
 import { useState } from "react";
 import { AiFillLinkedin, AiOutlineMail, AiFillPhone } from "react-icons/ai";
+import { useSectionInView } from "../Lib/hooks";
 // Import the CSS file
-import "./ContactForm.css";
+import "./Contact.css";
 
 interface FormData {
   email: string;
@@ -12,6 +13,7 @@ interface FormData {
   message: string;
 }
 const Home: NextPage = () => {
+  const { ref } = useSectionInView("Contact");
   // for submit message
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
@@ -50,16 +52,27 @@ const Home: NextPage = () => {
   });
 
   return (
-    <div className="py-1 text-slate-800 dark:text-slate-100">
+    <section id="#contact" className="py-1 text-slate-800 dark:text-slate-100">
       <h2 className="mb-4 text-4xl tracking-tight font-extrabold flex justify-center items-center text-slate-900 dark:text-white">
         <span className="flex-grow">Contact Me</span>
-        <a href="mailto:jack.li19996@gmail.com" className="text-slate-800 dark:text-slate-400">
+        <a
+          href="mailto:jack.li19996@gmail.com"
+          className="text-slate-800 dark:text-slate-400"
+        >
           <AiOutlineMail className="w-8 h-8 inline-block" />
         </a>
-        <a href="https://www.linkedin.com/in/jackli140/" target="_blank" rel="noopener noreferrer" className="text-slate-800 dark:text-slate-400 ml-4">
+        <a
+          href="https://www.linkedin.com/in/jackli140/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-slate-800 dark:text-slate-400 ml-4"
+        >
           <AiFillLinkedin className="w-8 h-8 inline-block" />
         </a>
-        <a href="tel:8564921879" className="text-slate-800 dark:text-slate-400 ml-4">
+        <a
+          href="tel:8564921879"
+          className="text-slate-800 dark:text-slate-400 ml-4"
+        >
           <AiFillPhone className="w-8 h-8 inline-block" />
         </a>
       </h2>
@@ -167,7 +180,7 @@ const Home: NextPage = () => {
           )}
         </div>
       </form>
-    </div>
+    </section>
   );
 };
 export default Home;

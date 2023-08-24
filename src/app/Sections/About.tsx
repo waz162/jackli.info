@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { useSectionInView } from "../Lib/hooks";
 import { AiFillLinkedin, AiFillInstagram, AiFillGithub } from "react-icons/ai";
 import pic_of_me from "../../../public/pic_of_me.png";
 
@@ -7,12 +8,16 @@ import pic_of_me from "../../../public/pic_of_me.png";
 import "./About.css";
 
 const About: React.FC = () => {
+  const { ref } = useSectionInView("About", 0.5);
   return (
-    <div className="text-center p-10">
+    <section
+      id="#about"
+      className="flex flex-col justify-center items-center min-h-screen"
+    >
       <h2 className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-5xl font-black md:text-6xl">
         Jack Li
       </h2>
-      <h3 className="text-xl py-2 md:text-3xl dark:text-slate-100">
+      <h3 className="text-xl py-2 md:text-3xl dark:text-slate-100 text-center">
         Software Engineer at What If Media Group
       </h3>
       <p className="text-md py-5 leading-7 sm:leading-10 m:leading-15 text-slate-700 dark:text-slate-400 sm:text-md md:text-lg max-w-lg mx-auto">
@@ -42,7 +47,7 @@ const About: React.FC = () => {
           <Image src={pic_of_me} objectFit="cover" alt="cartoon avatar" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

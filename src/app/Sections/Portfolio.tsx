@@ -3,6 +3,8 @@ import React from "react";
 // @ts-ignore
 import Flickity from "react-flickity-component";
 import PortfolioImage from "../Components/PortfolioImage"; // Update the path accordingly
+import SectionHeading from "../Components/SectionHeading";
+import { useSectionInView } from "../Lib/hooks";
 import web1 from "../../../public/web1.png";
 import web2 from "../../../public/web2.png";
 import web3 from "../../../public/web3.png";
@@ -14,6 +16,8 @@ import web6 from "../../../public/web6.png";
 import "./Portfolio.css";
 
 const PortfolioSection: React.FC = () => {
+  const { ref } = useSectionInView("Portfolio");
+
   const flickityOptions = {
     initialIndex: 0,
     cellAlign: "center",
@@ -24,9 +28,9 @@ const PortfolioSection: React.FC = () => {
   };
 
   return (
-    <div>
+    <section id="#portfolio">
       <div className="py-2 md:py-5 lg:py-8 overflow-hidden">
-        <h3 className="text-3xl py-1 dark:text-slate-100">Portfolio</h3>
+        <SectionHeading>Portfolio</SectionHeading>
         <p className="text-md py-2 leading-8 text-gray-800 dark:text-slate-400">
           As a{" "}
           <span className="text-teal-500 dark:text-teal-300">
@@ -71,7 +75,7 @@ const PortfolioSection: React.FC = () => {
           <PortfolioImage alt="web6" src={web6} />
         </Flickity>
       </div>
-    </div>
+    </section>
   );
 };
 
