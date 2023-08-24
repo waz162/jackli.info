@@ -1,6 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+// import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 // import corpcommentImg from "@/public/corpcomment.png";
 // import rmtdevImg from "@/public/rmtdev.png";
@@ -31,28 +31,27 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Software Engineer at What If Media Group",
+    location: "Fort Lee, NJ",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I'm now a full-stack developer working on small team. I wear a lot of hats and my stack includes React, TypeScript, AWS, DynamoDB, PHP, AJAX. and MariaDB.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2021 - present",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Masters Student at Stevens Institute of Technology",
+    location: "Hoboken, NJ",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Graduated through an accelerated Masters Program with a Masters in Engineering Management.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2021 - 2022",
+  },
+  {
+    title: "Undergraduate Student at Stevens Institute of Technology",
+    location: "Hoboken, NJ",
+    description: "Graduated with a Bachelors in Software Engineering.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2017-2021",
   },
 ] as const;
 

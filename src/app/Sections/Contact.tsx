@@ -57,7 +57,7 @@ const Home: NextPage = () => {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 lg:max-w-[800px] ml-auto mr-auto py-1 scroll-mt-28 text-slate-800 dark:text-slate-100"
+      className="mb-20 ml-auto mr-auto scroll-mt-28 py-1 text-slate-800 dark:text-slate-100 sm:mb-28 lg:max-w-[800px]"
       initial={{
         opacity: 0,
       }}
@@ -72,29 +72,35 @@ const Home: NextPage = () => {
       }}
     >
       <SectionHeading>Contact Me</SectionHeading>
-      <div className="mb-2 sm:mb-4 text-4xl tracking-tight font-extrabold flex justify-center items-center text-slate-900 dark:text-white">
-        <a
+      <div className="mb-2 flex items-center justify-center text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:mb-4">
+        <motion.a
           href="mailto:jack.li19996@gmail.com"
-          className="text-slate-800 dark:text-slate-400"
+          className="text-slate-800 hover:text-teal-500 dark:text-slate-400"
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
         >
-          <AiOutlineMail className="w-8 h-8 inline-block" />
-        </a>
-        <a
+          <AiOutlineMail className="inline-block h-8 w-8" />
+        </motion.a>
+        <motion.a
           href="https://www.linkedin.com/in/jackli140/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-slate-800 dark:text-slate-400 ml-4"
+          className="ml-4 text-slate-800 hover:text-teal-500 dark:text-slate-400"
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
         >
-          <AiFillLinkedin className="w-8 h-8 inline-block" />
-        </a>
-        <a
+          <AiFillLinkedin className="inline-block h-8 w-8" />
+        </motion.a>
+        <motion.a
           href="tel:8564921879"
-          className="text-slate-800 dark:text-slate-400 ml-4"
+          className="ml-4 text-slate-800 hover:text-teal-500 dark:text-slate-400"
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
         >
-          <AiFillPhone className="w-8 h-8 inline-block" />
-        </a>
+          <AiFillPhone className="inline-block h-8 w-8" />
+        </motion.a>
       </div>
-      <p className="text-lg sm:text-xl py-4 sm:py-2 leading-8 text-slate-800 dark:text-slate-400">
+      <p className="py-4 text-center text-lg leading-8 text-slate-800 dark:text-slate-400 sm:py-2 sm:text-xl">
         Reach out if you have questions, ideas, or just want to say hello.
         I&apos;d love to hear from you!
       </p>
@@ -102,7 +108,7 @@ const Home: NextPage = () => {
         <div className="sm:col-span-2">
           <label
             htmlFor="email"
-            className="text-md sm:text-lg font-medium pt-8 pb-2 text-slate-600 dark:text-slate-100"
+            className="text-md pb-2 pt-8 font-medium text-slate-600 dark:text-slate-100 sm:text-lg"
           >
             Your email
           </label>
@@ -113,15 +119,15 @@ const Home: NextPage = () => {
               pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
             })}
             placeholder="name@example.com"
-            className={`shadow-sm border text-slate-900 text-sm rounded-xl focus:outline-none block w-full p-2.5 dark:bg-slate-800 dark:placeholder-slate-400 dark:text-white dark:shadow-sm-light border-slate-300 dark:border-slate-900 ${
+            className={`dark:shadow-sm-light block w-full rounded-xl border border-slate-300 p-2.5 text-sm text-slate-900 shadow-sm focus:outline-none dark:border-slate-900 dark:bg-slate-800 dark:text-white dark:placeholder-slate-400 ${
               errors.email
-                ? "dark:focus:border-red-700 focus:ring-red-500 focus:border-red-500 dark:focus:ring-red-700 "
-                : "dark:focus:border-teal-500 focus:ring-teal-500 focus:border-teal-500 dark:focus:ring-teal-500"
+                ? "focus:border-red-500 focus:ring-red-500 dark:focus:border-red-700 dark:focus:ring-red-700 "
+                : "focus:border-teal-500 focus:ring-teal-500 dark:focus:border-teal-500 dark:focus:ring-teal-500"
             }`}
             // className="shadow-sm border border-slate-300 text-slate-900 text-sm rounded-xl focus:outline-none focus:ring-teal-500 focus:border-teal-500 block w-full p-2.5 dark:bg-slate-800 dark:border-slate-900 dark:placeholder-slate-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500 dark:shadow-sm-light"
           />
           {errors.email && (
-            <p className="error-msg last:text-xs text-red-700">
+            <p className="error-msg text-red-700 last:text-xs">
               Please enter a valid email
             </p>
           )}
@@ -129,7 +135,7 @@ const Home: NextPage = () => {
         <div className="sm:col-span-2">
           <label
             htmlFor="subject"
-            className="text-md sm:text-lg font-medium pt-8 pb-2 text-slate-500 dark:text-slate-100"
+            className="text-md pb-2 pt-8 font-medium text-slate-500 dark:text-slate-100 sm:text-lg"
           >
             Subject
           </label>
@@ -140,10 +146,10 @@ const Home: NextPage = () => {
                 required: true,
                 minLength: 3,
               })}
-              className={`shadow-sm border text-slate-900 text-sm rounded-xl focus:outline-none block w-full p-2.5 dark:bg-slate-800 dark:placeholder-slate-400 dark:text-white dark:shadow-sm-light border-slate-300 dark:border-slate-900 ${
+              className={`dark:shadow-sm-light block w-full rounded-xl border border-slate-300 p-2.5 text-sm text-slate-900 shadow-sm focus:outline-none dark:border-slate-900 dark:bg-slate-800 dark:text-white dark:placeholder-slate-400 ${
                 errors.subject
-                  ? "dark:focus:border-red-700 focus:ring-red-500 focus:border-red-500 dark:focus:ring-red-700 "
-                  : "dark:focus:border-teal-500 focus:ring-teal-500 focus:border-teal-500 dark:focus:ring-teal-500"
+                  ? "focus:border-red-500 focus:ring-red-500 dark:focus:border-red-700 dark:focus:ring-red-700 "
+                  : "focus:border-teal-500 focus:ring-teal-500 dark:focus:border-teal-500 dark:focus:ring-teal-500"
               }`}
               placeholder="Put your subject here"
             />
@@ -157,7 +163,7 @@ const Home: NextPage = () => {
         <div className="sm:col-span-2">
           <label
             htmlFor="message"
-            className="text-md sm:text-lg font-medium pt-8 pb-2 text-slate-500 dark:text-slate-100"
+            className="text-md pb-2 pt-8 font-medium text-slate-500 dark:text-slate-100 sm:text-lg"
           >
             Your message
           </label>
@@ -168,10 +174,10 @@ const Home: NextPage = () => {
               minLength: 3,
             })}
             placeholder="Rest of your message here!"
-            className={`shadow-sm border text-slate-900 text-sm rounded-xl focus:outline-none block w-full p-2.5 dark:bg-slate-800 dark:placeholder-slate-400 dark:text-white dark:shadow-sm-light border-slate-300 dark:border-slate-900 ${
+            className={`dark:shadow-sm-light block w-full rounded-xl border border-slate-300 p-2.5 text-sm text-slate-900 shadow-sm focus:outline-none dark:border-slate-900 dark:bg-slate-800 dark:text-white dark:placeholder-slate-400 ${
               errors.message
-                ? "dark:focus:border-red-700 focus:ring-red-500 focus:border-red-500 dark:focus:ring-red-700 "
-                : "dark:focus:border-teal-500 focus:ring-teal-500 focus:border-teal-500 dark:focus:ring-teal-500"
+                ? "focus:border-red-500 focus:ring-red-500 dark:focus:border-red-700 dark:focus:ring-red-700 "
+                : "focus:border-teal-500 focus:ring-teal-500 dark:focus:border-teal-500 dark:focus:ring-teal-500"
             }`}
           />
           {errors.message && (
@@ -181,20 +187,23 @@ const Home: NextPage = () => {
           )}
         </div>
         <div className="flex justify-center">
-          <button
+          <motion.button
             type="submit"
-            className="bg-gradient-to-r from-teal-500 to-cyan-500 text-slate-100 px-4 py-2 border-none rounded-md  dark:text-slate-200"
+            className="rounded-xl border-none bg-gradient-to-r from-teal-500 to-cyan-500 px-8  py-4 text-lg text-slate-100  dark:text-slate-200"
             onClick={handleSubmit(submit)}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             Send message
-          </button>
+          </motion.button>
         </div>
         <div className="flex justify-center">
           {isSuccess && (
-            <p className="text-green-500 text-sm font-semibold">{message}</p>
+            <p className="text-sm font-semibold text-green-500">{message}</p>
           )}
           {isError && (
-            <p className="text-red-500 text-sm font-semibold">{message}</p>
+            <p className="text-sm font-semibold text-red-500">{message}</p>
           )}
         </div>
       </form>

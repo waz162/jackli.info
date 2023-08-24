@@ -18,7 +18,7 @@ export default function Home() {
         <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
       </Head>
 
-      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-slate-900">
+      <main className="bg-white px-10 dark:bg-slate-900 md:px-20 lg:px-40">
         <section className="min-h-screen">
           <Header />
           <About />
