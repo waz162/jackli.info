@@ -1,9 +1,11 @@
 import type { NextPage } from "next";
 import { useForm } from "react-hook-form";
 import useWeb3forms from "@web3forms/react";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { AiFillLinkedin, AiOutlineMail, AiFillPhone } from "react-icons/ai";
 import { useSectionInView } from "../Lib/hooks";
+import SectionHeading from "../Components/SectionHeading";
 // Import the CSS file
 import "./Contact.css";
 
@@ -52,9 +54,25 @@ const Home: NextPage = () => {
   });
 
   return (
-    <section id="#contact" className="py-1 text-slate-800 dark:text-slate-100">
-      <h2 className="mb-4 text-4xl tracking-tight font-extrabold flex justify-center items-center text-slate-900 dark:text-white">
-        <span className="flex-grow">Contact Me</span>
+    <motion.section
+      id="contact"
+      ref={ref}
+      className="mb-20 sm:mb-28 items-center text-center py-1 scroll-mt-28 text-slate-800 dark:text-slate-100"
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1,
+      }}
+      viewport={{
+        once: true,
+      }}
+    >
+      <SectionHeading>Contact Me</SectionHeading>
+      <div className="mb-2 sm:mb-4 text-4xl tracking-tight font-extrabold flex justify-center items-center text-slate-900 dark:text-white">
         <a
           href="mailto:jack.li19996@gmail.com"
           className="text-slate-800 dark:text-slate-400"
@@ -75,8 +93,8 @@ const Home: NextPage = () => {
         >
           <AiFillPhone className="w-8 h-8 inline-block" />
         </a>
-      </h2>
-      <p className="text-xl py-2 leading-8 text-slate-800 dark:text-slate-400">
+      </div>
+      <p className="text-lg sm:text-xl py-4 sm:py-2 leading-8 text-slate-800 dark:text-slate-400">
         Reach out if you have questions, ideas, or just want to say hello.
         I&apos;d love to hear from you!
       </p>
@@ -84,7 +102,7 @@ const Home: NextPage = () => {
         <div className="sm:col-span-2">
           <label
             htmlFor="email"
-            className="text-lg font-medium pt-8 pb-2 text-slate-600 dark:text-slate-100"
+            className="text-md sm:text-lg font-medium pt-8 pb-2 text-slate-600 dark:text-slate-100"
           >
             Your email
           </label>
@@ -111,7 +129,7 @@ const Home: NextPage = () => {
         <div className="sm:col-span-2">
           <label
             htmlFor="subject"
-            className="text-lg font-medium pt-8 pb-2 text-slate-500 dark:text-slate-100"
+            className="text-md sm:text-lg font-medium pt-8 pb-2 text-slate-500 dark:text-slate-100"
           >
             Subject
           </label>
@@ -139,7 +157,7 @@ const Home: NextPage = () => {
         <div className="sm:col-span-2">
           <label
             htmlFor="message"
-            className="text-lg font-medium pt-8 pb-2 text-slate-500 dark:text-slate-100"
+            className="text-md sm:text-lg font-medium pt-8 pb-2 text-slate-500 dark:text-slate-100"
           >
             Your message
           </label>
@@ -180,7 +198,7 @@ const Home: NextPage = () => {
           )}
         </div>
       </form>
-    </section>
+    </motion.section>
   );
 };
 export default Home;

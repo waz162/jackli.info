@@ -9,9 +9,9 @@ import code from "../../../public/code.png";
 import consulting from "../../../public/consulting.png";
 
 const Experience: React.FC = () => {
-  const { ref } = useSectionInView("Experience");
+  const { ref } = useSectionInView("Experience", 0.5);
   return (
-    <section id="#experience">
+    <section ref={ref} id="experience" className="scroll-mt-28">
       <div>
         <SectionHeading>My Experience</SectionHeading>
         <p className="text-md py-2 leading-8 text-gray-800 dark:text-slate-400">

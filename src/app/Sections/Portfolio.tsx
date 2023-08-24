@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -28,7 +30,7 @@ const PortfolioSection: React.FC = () => {
   };
 
   return (
-    <section id="#portfolio">
+    <section ref={ref} id="portfolio" className="scroll-mt-28">
       <div className="py-2 md:py-5 lg:py-8 overflow-hidden">
         <SectionHeading>Portfolio</SectionHeading>
         <p className="text-md py-2 leading-8 text-gray-800 dark:text-slate-400">

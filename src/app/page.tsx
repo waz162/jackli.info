@@ -1,5 +1,5 @@
 "use client"; // This is a client component 👈🏽
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
 import Header from "../app/Sections/Header";
 import About from "../app/Sections/About";
@@ -8,14 +8,10 @@ import Portfolio from "../app/Sections/Portfolio";
 import Contact from "../app/Sections/Contact";
 import Footer from "../app/Sections/Footer";
 import Skills from "../app/Sections/Skills";
-import { useActiveSectionContext } from "../app/Context/active-section-context";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div>
       <Head>
         <title>Jack Li Portfolio</title>
         <meta name="description" content="Jack Li Portfolio" />
@@ -31,6 +27,7 @@ export default function Home() {
         <Skills />
         <Portfolio />
         <Contact />
+        <Footer />
       </main>
     </div>
   );

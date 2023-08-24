@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+// import corpcommentImg from "@/public/corpcomment.png";
+// import rmtdevImg from "@/public/rmtdev.png";
+// import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
   {
@@ -81,23 +81,23 @@ export const experiencesData = [
 // ] as const;
 
 export const skillsData = [
+  "Javascript",
+  "Typescript",
   "HTML",
   "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
   "Python",
-  "Django",
-  "Framer Motion",
+  "PHP",
+  "Typescript",
+  "Next.js",
+  "Angular",
+  "Node",
+  "AJAX",
+  "Git & Github",
+  "Chrome DevTools",
+  "Postman",
+  "MongoDB",
+  "AWS",
+  "Docker",
+  "Vercel",
+  "FramerMotion",
 ] as const;
