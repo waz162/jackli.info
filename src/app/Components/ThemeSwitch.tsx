@@ -15,7 +15,7 @@ export default function ThemeSwitch() {
       {theme === "light" ? (
         <BsFillSunFill className="cursor-pointer text-2xl text-yellow-600" />
       ) : (
-        <BsFillMoonStarsFill className="cursor-pointer text-slate-200 text-2xl" />
+        <BsFillMoonStarsFill className="cursor-pointer text-slate-400 text-2xl" />
       )}
     </button>
   );
