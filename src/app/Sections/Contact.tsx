@@ -57,7 +57,7 @@ const Home: NextPage = () => {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 items-center text-center py-1 scroll-mt-28 text-slate-800 dark:text-slate-100"
+      className="mb-20 sm:mb-28 lg:max-w-[800px] ml-auto mr-auto py-1 scroll-mt-28 text-slate-800 dark:text-slate-100"
       initial={{
         opacity: 0,
       }}
