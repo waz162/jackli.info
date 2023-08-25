@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import SectionHeading from "../Components/SectionHeading";
 import {
   VerticalTimeline,
@@ -17,6 +17,13 @@ import "./Experience.css";
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
   const { theme } = useTheme();
+
+  const itemsToShowInitially = 3; // Number of items to show initially
+  const [itemsToShow, setItemsToShow] = useState(itemsToShowInitially);
+
+  const handleLoadMore = () => {
+    setItemsToShow(itemsToShow + itemsToShowInitially);
+  };
 
   return (
     <section id="experience" ref={ref} className="mb-28 scroll-mt-28 sm:mb-40">
@@ -46,7 +53,7 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <h3 className="font-semibold capitalize dark:text-slate-100">
+              <h3 className="font-semibold capitalize text-slate-900 dark:text-slate-100">
                 {item.title}
               </h3>
               <p className="!mt-0 font-normal text-teal-500">{item.location}</p>
@@ -57,6 +64,11 @@ export default function Experience() {
           </React.Fragment>
         ))}
       </VerticalTimeline>
+      {itemsToShow < experiencesData.length && (
+        <button onClick={handleLoadMore} className="load-more-button">
+          Load More
+        </button>
+      )}
     </section>
   );
 }

@@ -4,14 +4,19 @@ import React from "react";
 import Image from "next/image";
 import { useSectionInView } from "../Lib/hooks";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { BsArrowRight } from "react-icons/bs";
 import { AiFillLinkedin, AiFillInstagram, AiFillGithub } from "react-icons/ai";
 import pic_of_me from "../../../public/pic_of_me.png";
+import { useActiveSectionContext } from "../Context/ActiveSectionContext";
 
 // Import the CSS file
 import "./About.css";
 
 const About: React.FC = () => {
   const { ref } = useSectionInView("About", 0.2);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
   return (
     <section
       ref={ref}
@@ -69,37 +74,50 @@ const About: React.FC = () => {
         byte. Let&apos;s turn ideas into reality through lines of code!
       </motion.p>
       <motion.div
-        className="flex justify-center gap-10 py-3 text-5xl text-gray-600 sm:gap-16"
+        className="justify-center gap-10 py-3 text-5xl text-slate-600 sm:flex sm:gap-16"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.1,
         }}
       >
-        <motion.a
-          href="https://github.com/waz162"
-          className="hover:text-teal-500"
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
+        <Link
+          href="#contact"
+          className="group flex items-center gap-2 rounded-full bg-slate-600 px-7 py-3 text-lg text-white shadow-xl outline-none transition hover:scale-110 hover:bg-teal-500 focus:scale-110 active:scale-105"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
-          <AiFillGithub />
-        </motion.a>
-        <motion.a
-          href="https://www.linkedin.com/in/jackli140/"
-          className="hover:text-teal-500"
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <AiFillLinkedin />
-        </motion.a>
-        <motion.a
-          href="https://www.instagram.com/jackli17/"
-          className="hover:text-teal-500"
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <AiFillInstagram />
-        </motion.a>
+          Contact me here{" "}
+          <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
+        </Link>
+        <div className="mt-5 flex justify-center gap-5 sm:mt-0 sm:flex-none sm:gap-10">
+          <motion.a
+            href="https://github.com/waz162"
+            className="hover:text-teal-500"
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <AiFillGithub />
+          </motion.a>
+          <motion.a
+            href="https://www.linkedin.com/in/jackli140/"
+            className="hover:text-teal-500"
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <AiFillLinkedin />
+          </motion.a>
+          <motion.a
+            href="https://www.instagram.com/jackli17/"
+            className="hover:text-teal-500"
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <AiFillInstagram />
+          </motion.a>
+        </div>
       </motion.div>
       <div className="relative hidden items-center justify-center sm:flex">
         <motion.div

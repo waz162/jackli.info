@@ -1,7 +1,9 @@
 .dark .vertical-timeline-element-date {
   color: white;
 }
-
+.vertical-timeline-element-date {
+  color: rgb(88, 101, 113);
+}
 .dark .vertical-timeline-element-icon {
   color: white;
 }
