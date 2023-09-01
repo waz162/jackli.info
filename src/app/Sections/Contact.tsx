@@ -189,7 +189,7 @@ const Home: NextPage = () => {
         <div className="flex justify-center">
           <motion.button
             type="submit"
-            className="rounded-xl border-none bg-gradient-to-r from-teal-500 to-cyan-500 px-8  py-4 text-lg text-slate-100  dark:text-slate-200"
+            className="rounded-full border-none bg-gradient-to-r from-teal-500 to-cyan-500 px-8  py-4 text-lg text-slate-100  dark:text-slate-200"
             onClick={handleSubmit(submit)}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}

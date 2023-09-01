@@ -32,7 +32,7 @@ const About: React.FC = () => {
             duration: 0.2,
           }}
         >
-          <div className="relative mx-auto mt-10 h-40 w-40 overflow-hidden rounded-full border-[0.35rem] border-white bg-gradient-to-b from-teal-500 shadow-xl dark:border-slate-400 sm:h-80 sm:w-80 md:h-96 md:w-96 ">
+          <div className="relative mx-auto mt-10 h-40 w-40 overflow-hidden rounded-full border-[0.35rem] border-white bg-gradient-to-b from-teal-500 shadow-xl dark:border-slate-100 sm:h-80 sm:w-80 md:h-96 md:w-96 ">
             <Image src={pic_of_me} objectFit="cover" alt="cartoon avatar" />
           </div>
           <motion.span
@@ -51,7 +51,7 @@ const About: React.FC = () => {
         </motion.div>
       </div>
       <motion.h2
-        className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text pt-10 text-5xl font-black text-transparent sm:pt-0 md:text-6xl"
+        className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text pt-10 text-5xl font-black text-transparent sm:pt-5 md:text-6xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -83,7 +83,7 @@ const About: React.FC = () => {
       >
         <Link
           href="#contact"
-          className="group flex items-center gap-2 rounded-full bg-slate-600 px-7 py-3 text-lg text-white shadow-xl outline-none transition hover:scale-110 hover:bg-teal-500 focus:scale-110 active:scale-105"
+          className="group flex items-center gap-2 rounded-full border-none bg-gradient-to-r  from-teal-500 to-cyan-500 px-7 py-3 text-lg text-slate-100 shadow-xl  outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:text-slate-200"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -128,7 +128,7 @@ const About: React.FC = () => {
             duration: 0.2,
           }}
         >
-          <div className="relative mx-auto mt-10 h-40 w-40 overflow-hidden rounded-full border-[0.35rem] border-white bg-gradient-to-b from-teal-500 shadow-xl dark:border-slate-400 sm:h-80 sm:w-80 md:h-96 md:w-96 ">
+          <div className="relative mx-auto mt-10 h-40 w-40 overflow-hidden rounded-full border-[0.35rem] border-white bg-gradient-to-b from-teal-500 shadow-xl dark:border-slate-100 sm:h-[35vh] sm:w-[35vh]">
             <Image src={pic_of_me} objectFit="cover" alt="cartoon avatar" />
           </div>
           <motion.span
