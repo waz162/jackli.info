@@ -28,7 +28,7 @@ export default function Experience() {
 
   const addButton = () => (
     <button
-      className="flex h-full w-full rounded-full p-2 text-white shadow-lg dark:bg-[#475569]"
+      className="flex h-full w-full rounded-full bg-[#e2e8f0] p-2 text-slate-900 shadow-lg dark:bg-[#475569] dark:text-slate-100"
       aria-label="add"
     >
       <BsPlusLg className="stroke-1" />
