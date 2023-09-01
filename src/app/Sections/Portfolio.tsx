@@ -33,7 +33,7 @@ const PortfolioSection: React.FC = () => {
     <section ref={ref} id="portfolio" className="scroll-mt-28">
       <div className="overflow-hidden py-2 md:py-5 lg:py-8">
         <SectionHeading>Portfolio</SectionHeading>
-        <p className="text-md py-2 leading-8 text-gray-800 dark:text-slate-400">
+        <p className="text-md py-2 leading-8 text-gray-800 dark:text-slate-200">
           As a{" "}
           <span className="text-teal-500 dark:text-teal-300">
             Software Engineer

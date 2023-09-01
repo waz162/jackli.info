@@ -65,7 +65,7 @@ const About: React.FC = () => {
         Software Engineer at What If Media Group
       </motion.h3>
       <motion.p
-        className="text-md m:leading-15 sm:text-md mx-auto max-w-lg py-5 leading-7 text-slate-700 dark:text-slate-400 sm:leading-10 md:text-lg"
+        className="text-md m:leading-15 sm:text-md mx-auto max-w-lg py-5 leading-7 text-slate-700 dark:text-slate-200 sm:leading-10 md:text-lg"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -92,7 +92,7 @@ const About: React.FC = () => {
           Contact me here{" "}
           <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
         </Link>
-        <div className="mt-5 flex justify-center gap-5 sm:mt-0 sm:flex-none sm:gap-10">
+        <div className="mt-5 flex justify-center gap-5 dark:text-slate-200 sm:mt-0 sm:flex-none sm:gap-10">
           <motion.a
             href="https://github.com/waz162"
             className="hover:text-teal-500"
