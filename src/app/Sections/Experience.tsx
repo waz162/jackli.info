@@ -10,26 +10,36 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "../Lib/data";
 import { useSectionInView } from "../Lib/hooks";
 import { useTheme } from "../Context/ThemeContext";
-
-// Import the CSS file
+import { BsPlusLg } from "react-icons/bs";
 import "./Experience.css";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
   const { theme } = useTheme();
 
-  const itemsToShowInitially = 3; // Number of items to show initially
+  // State to track the number of items to display
+  const itemsToShowInitially = 3;
   const [itemsToShow, setItemsToShow] = useState(itemsToShowInitially);
 
+  // Function to handle loading more items
   const handleLoadMore = () => {
     setItemsToShow(itemsToShow + itemsToShowInitially);
   };
+
+  const addButton = () => (
+    <button
+      className="flex h-full w-full rounded-full p-2 text-white shadow-lg dark:bg-[#475569]"
+      aria-label="add"
+    >
+      <BsPlusLg className="stroke-1" />
+    </button>
+  );
 
   return (
     <section id="experience" ref={ref} className="mb-28 scroll-mt-28 sm:mb-40">
       <SectionHeading>My experience</SectionHeading>
       <VerticalTimeline lineColor="rgb(204 251 241)">
-        {experiencesData.map((item, index) => (
+        {experiencesData.slice(0, itemsToShow).map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
               contentStyle={{
@@ -63,12 +73,14 @@ export default function Experience() {
             </VerticalTimelineElement>
           </React.Fragment>
         ))}
+        {itemsToShow < experiencesData.length && (
+          <VerticalTimelineElement
+            iconOnClick={handleLoadMore}
+            iconClassName="vertical-timeline-elemnt-icon--button"
+            icon={addButton()}
+          />
+        )}
       </VerticalTimeline>
-      {itemsToShow < experiencesData.length && (
-        <button onClick={handleLoadMore} className="load-more-button">
-          Load More
-        </button>
-      )}
     </section>
   );
 }

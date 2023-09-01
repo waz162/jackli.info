@@ -51,7 +51,7 @@ const About: React.FC = () => {
         </motion.div>
       </div>
       <motion.h2
-        className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text pt-10 text-5xl font-black text-transparent sm:pt-5 md:text-6xl"
+        className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text pt-0 text-5xl font-black text-transparent sm:pt-5 md:text-6xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
