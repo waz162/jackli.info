@@ -51,7 +51,7 @@ const About: React.FC = () => {
         </motion.div>
       </div>
       <motion.h2
-        className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text pt-0 text-5xl font-black text-transparent sm:pt-5 md:text-6xl"
+        className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text pt-2 text-5xl font-black text-transparent sm:pt-5 md:text-6xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -128,11 +128,11 @@ const About: React.FC = () => {
             duration: 0.2,
           }}
         >
-          <div className="relative mx-auto mt-10 h-40 w-40 overflow-hidden rounded-full border-[0.35rem] border-white bg-gradient-to-b from-teal-500 shadow-xl dark:border-slate-100 sm:h-[35vh] sm:w-[35vh]">
+          <div className="relative mx-auto mt-10 h-40 w-40 overflow-hidden rounded-full border-[0.35rem] border-white bg-gradient-to-b from-teal-500 shadow-xl dark:border-slate-100 md:h-[30vh] md:w-[30vh]">
             <Image src={pic_of_me} objectFit="cover" alt="cartoon avatar" />
           </div>
           <motion.span
-            className="absolute bottom-9 right-9 text-6xl"
+            className="absolute bottom-9 right-9 text-6xl md:bottom-9 md:right-9"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
