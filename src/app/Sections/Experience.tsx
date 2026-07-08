@@ -36,7 +36,11 @@ export default function Experience() {
   );
 
   return (
-    <section id="experience" ref={ref} className="mb-28 scroll-mt-28 sm:mb-40">
+    <section
+      id="experience"
+      ref={ref}
+      className="mb-28 max-w-full overflow-x-hidden scroll-mt-28 sm:mb-40"
+    >
       <SectionHeading>My experience</SectionHeading>
       <VerticalTimeline lineColor="rgb(204 251 241)">
         {experiencesData.slice(0, itemsToShow).map((item, index) => (

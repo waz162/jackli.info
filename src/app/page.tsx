@@ -10,7 +10,7 @@ import Skills from "./Sections/Skills";
 
 export default function Home() {
   return (
-    <main className="px-10 md:px-20 lg:px-40">
+    <main className="w-full max-w-full overflow-x-hidden px-4 sm:px-10 md:px-20 lg:px-40">
       <section className="min-h-screen">
         <About />
       </section>

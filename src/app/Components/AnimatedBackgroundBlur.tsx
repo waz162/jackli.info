@@ -21,6 +21,7 @@ interface AnimationVariants extends Variants {
     };
   };
 }
+
 const animationVariants: AnimationVariants = {
   start: {
     x: 0,
@@ -28,8 +29,8 @@ const animationVariants: AnimationVariants = {
     rotate: 0,
   },
   end: {
-    x: "100vh",
-    y: "100vh",
+    x: "30vh",
+    y: "30vh",
     rotate: 5,
     transition: {
       duration: 20,
@@ -42,15 +43,18 @@ const animationVariants: AnimationVariants = {
 
 function AnimatedElements() {
   return (
-    <div>
+    <div
+      aria-hidden="true"
+      className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
+    >
       <motion.div
-        className="absolute right-[11rem] top-[-6rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#ffc7c9] blur-[10rem] dark:bg-[#963e40] sm:w-[68.75rem]"
+        className="absolute -right-24 top-[-6rem] h-[20rem] w-[20rem] rounded-full bg-[#ffc7c9] blur-[10rem] dark:bg-[#963e40] sm:right-[11rem] sm:h-[31.25rem] sm:w-[31.25rem] sm:blur-[10rem] md:w-[50rem] lg:w-[68.75rem]"
         initial="start"
         animate="end"
         variants={animationVariants}
       ></motion.div>
       <motion.div
-        className="absolute left-[-35rem] top-[-1rem] -z-10 h-[31.25rem] w-[50rem] rounded-full bg-[#bdb4ff] blur-[10rem] dark:bg-[#49459a] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"
+        className="absolute -left-24 top-[-1rem] h-[20rem] w-[20rem] rounded-full bg-[#bdb4ff] blur-[10rem] dark:bg-[#49459a] sm:-left-48 sm:h-[31.25rem] sm:w-[50rem] md:-left-[33rem] lg:-left-[28rem] xl:-left-[15rem] 2xl:-left-[5rem] lg:w-[68.75rem]"
         initial="start"
         animate="end"
         variants={animationVariants}
