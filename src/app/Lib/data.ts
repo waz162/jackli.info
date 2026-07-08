@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap, LuSearch } from "react-icons/lu";
 import { PiIdentificationBadgeBold } from "react-icons/pi";
-import corpcommentImg from "../../../public/corpcomment.png";
-import rmtdevImg from "../../../public/rmtdev.png";
-import wordanalyticsImg from "../../../public/wordanalytics.png";
+import jackLiLogoImg from "../../../public/jack-li-logo.png";
+import codeImg from "../../../public/code.png";
+import consultingImg from "../../../public/consulting.png";
 
 export const links = [
   {
@@ -34,15 +34,15 @@ export const experiencesData = [
     title: "Software Engineer at What If Media Group",
     location: "Fort Lee, NJ",
     description:
-      "I'm now a full-stack developer working on small team. I wear a lot of hats and my stack includes React, TypeScript, AWS, DynamoDB, PHP, AJAX. and MariaDB.",
+      "Full-stack developer building and maintaining web applications across the stack with React, TypeScript, AWS, DynamoDB, PHP, AJAX, and MariaDB.",
     icon: React.createElement(CgWorkAlt),
-    date: "2021 - present",
+    date: "2021 - Present",
   },
   {
     title: "Masters Student at Stevens Institute of Technology",
     location: "Hoboken, NJ",
     description:
-      "Graduated an accelerated Masters Program in Engineering Management with a distinct focus on harnessing the power of data-driven strategies. This specialization allowed me to utilize data analytics and decision-making techniques to enhance the efficiency and success of engineering projects.",
+      "Graduated from an accelerated Master's program in Engineering Management with a focus on data-driven strategies. Applied analytics and decision-making techniques to improve engineering project outcomes.",
     icon: React.createElement(LuGraduationCap),
     date: "2021 - 2022",
   },
@@ -50,77 +50,80 @@ export const experiencesData = [
     title: "Software Engineering Intern at What If Media Group",
     location: "Fort Lee, NJ",
     description:
-      "During my internship, I played a pivotal role in optimizing older web pages, resulting in an average 35% improvement in page load times. The optimized pages not only enhanced user experience but also led to an average 20% increase in user engagement and an average 15% boost in conversion rates.",
+      "Optimized legacy web pages, improving average page load times by 35%. The work increased user engagement by 20% and conversion rates by 15% on the updated pages.",
     icon: React.createElement(PiIdentificationBadgeBold),
     date: "2021 - 2022",
   },
   {
     title: "Undergraduate Student at Stevens Institute of Technology",
     location: "Hoboken, NJ",
-    description: "Graduated with a Bachelors in Software Engineering.",
+    description: "Graduated with a Bachelor's in Software Engineering.",
     icon: React.createElement(LuGraduationCap),
-    date: "2017-2021",
+    date: "2017 - 2021",
   },
   {
     title: "Infection Simulation Researcher",
     location: "Hoboken, NJ",
     description:
-      "I conducted impactful research in crowd simulation and pathogen modeling, employing C# expertise. I designed a plugin-based program using A* pathfinding and C-Drive algorithms for driving and avoiding models. I also explored disease spread with methods like EXPOSED and air circulation modeling using Unity.",
+      "Conducted research in crowd simulation and pathogen modeling using C#. Built a plugin-based program with A* pathfinding and C-Drive algorithms, and modeled disease spread with EXPOSED and air circulation techniques in Unity.",
     icon: React.createElement(LuSearch),
-    date: "2020-2020",
+    date: "2020",
   },
   {
-    title: "Smart Rain Barrel | Hoboken, NJ",
+    title: "Smart Rain Barrel Researcher",
     location: "Hoboken, NJ",
     description:
-      "Software Engineering Researcher\nWorked on a small engineering team to build smart rain barrels using Raspberry PI’s, Python, and MongoDB for data collection. Using data analysis capabilities of the Python library, pandas, we gathered essential data to devise an optimal rain collection and water dispersion strategy, aimed at alleviating storm drainage challenges for the city of Hoboken.",
+      "Worked on a small engineering team to build smart rain barrels using Raspberry Pis, Python, and MongoDB. Used pandas for data analysis to design an optimal rain collection and water dispersion strategy for Hoboken storm drainage.",
     icon: React.createElement(LuSearch),
-    date: "June 2019 – August 2019",
+    date: "June 2019 - August 2019",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "jackli.info",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "My personal portfolio site, designed in Figma and built with Next.js, React, and Tailwind CSS. Deployed to GitHub Pages with animated sections and a contact form.",
+    tags: ["React", "Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+    imageUrl: jackLiLogoImg,
+    link: "https://github.com/waz162/jackli.info",
   },
   {
-    title: "rmtDev",
+    title: "LeetCode Solutions",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "A growing collection of algorithm and data structure problems solved in Python, focused on clean implementations and consistent problem-solving patterns.",
+    tags: ["Python", "Algorithms", "Data Structures"],
+    imageUrl: codeImg,
+    link: "https://github.com/waz162/leetcode",
   },
   {
-    title: "Word Analytics",
+    title: "Complexity",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "A JavaScript project exploring computational complexity concepts through interactive examples and experiments.",
+    tags: ["JavaScript", "Algorithms", "Computer Science"],
+    imageUrl: consultingImg,
+    link: "https://github.com/waz162/Complexity",
   },
 ] as const;
 
 export const skillsData = [
-  "Javascript",
-  "Typescript",
+  "JavaScript",
+  "TypeScript",
   "HTML",
   "CSS",
   "Python",
   "PHP",
-  "Typescript",
+  "React",
   "Next.js",
   "Angular",
-  "Node",
-  "AJAX",
-  "Git & Github",
-  "Chrome DevTools",
-  "Postman",
-  "MongoDB",
+  "Node.js",
   "AWS",
   "Docker",
-  "Vercel",
-  "FramerMotion",
+  "MongoDB",
+  "MariaDB",
+  "DynamoDB",
+  "Git & GitHub",
+  "Chrome DevTools",
+  "Postman",
+  "Framer Motion",
 ] as const;

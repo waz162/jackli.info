@@ -6,7 +6,7 @@ import { useSectionInView } from "../Lib/hooks";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
-import { AiFillLinkedin, AiFillInstagram, AiFillGithub } from "react-icons/ai";
+import { AiFillInstagram, AiFillGithub } from "react-icons/ai";
 import pic_of_me from "../../../public/pic_of_me.png";
 import { useActiveSectionContext } from "../Context/ActiveSectionContext";
 
@@ -32,8 +32,15 @@ const About: React.FC = () => {
             duration: 0.2,
           }}
         >
-          <div className="relative mx-auto mt-10 h-40 w-40 overflow-hidden rounded-full border-[0.35rem] border-white bg-gradient-to-b from-teal-500 shadow-xl dark:border-slate-100 sm:h-80 sm:w-80 md:h-96 md:w-96 ">
-            <Image src={pic_of_me} objectFit="cover" alt="cartoon avatar" />
+          <div className="relative mx-auto mt-10 h-40 w-40 overflow-hidden rounded-full border-[0.35rem] border-white bg-gradient-to-b from-teal-500 shadow-xl dark:border-slate-100 sm:h-80 sm:w-80 md:h-96 md:w-96">
+            <Image
+              src={pic_of_me}
+              alt="Jack Li"
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 10rem, 30vh"
+              priority
+            />
           </div>
           <motion.span
             className="absolute bottom-2 right-2 text-4xl"
@@ -62,7 +69,7 @@ const About: React.FC = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Software Engineer at What If Media Group
+        Full-Stack Software Engineer
       </motion.h3>
       <motion.p
         className="text-md m:leading-15 sm:text-md mx-auto max-w-lg py-5 leading-7 text-slate-700 dark:text-slate-200 sm:leading-10 md:text-lg"
@@ -102,14 +109,6 @@ const About: React.FC = () => {
             <AiFillGithub />
           </motion.a>
           <motion.a
-            href="https://www.linkedin.com/in/jackli140/"
-            className="hover:text-teal-500"
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <AiFillLinkedin />
-          </motion.a>
-          <motion.a
             href="https://www.instagram.com/jackli17/"
             className="hover:text-teal-500"
             whileHover={{ scale: 1.2 }}
@@ -128,8 +127,15 @@ const About: React.FC = () => {
             duration: 0.2,
           }}
         >
-          <div className="relative mx-auto mt-10 h-40 w-40 overflow-hidden rounded-full border-[0.35rem] border-white bg-gradient-to-b from-teal-500 shadow-xl dark:border-slate-100 md:h-[30vh] md:w-[30vh]">
-            <Image src={pic_of_me} objectFit="cover" alt="cartoon avatar" />
+          <div className="relative mx-auto mt-10 h-40 w-40 overflow-hidden rounded-full border-[0.35rem] border-white bg-gradient-to-b from-teal-500 shadow-xl dark:border-slate-100 md:h-[30vh] md:w-[30vh] md:min-h-[10rem] md:min-w-[10rem]">
+            <Image
+              src={pic_of_me}
+              alt="Jack Li"
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 10rem, 30vh"
+              priority
+            />
           </div>
           <motion.span
             className="absolute bottom-9 right-9 text-6xl md:bottom-9 md:right-9"

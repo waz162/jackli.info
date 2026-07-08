@@ -1,9 +1,10 @@
-import type { NextPage } from "next";
+"use client";
+
 import { useForm } from "react-hook-form";
 import useWeb3forms from "@web3forms/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { AiFillLinkedin, AiOutlineMail, AiFillPhone } from "react-icons/ai";
+import { AiOutlineMail, AiFillPhone } from "react-icons/ai";
 import { useSectionInView } from "../Lib/hooks";
 import SectionHeading from "../Components/SectionHeading";
 // Import the CSS file
@@ -14,7 +15,7 @@ interface FormData {
   subject: string;
   message: string;
 }
-const Home: NextPage = () => {
+const Contact = () => {
   const { ref } = useSectionInView("Contact");
   // for submit message
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
@@ -80,16 +81,6 @@ const Home: NextPage = () => {
           whileTap={{ scale: 0.9 }}
         >
           <AiOutlineMail className="inline-block h-8 w-8" />
-        </motion.a>
-        <motion.a
-          href="https://www.linkedin.com/in/jackli140/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ml-4 text-slate-800 hover:text-teal-500 dark:text-slate-400"
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <AiFillLinkedin className="inline-block h-8 w-8" />
         </motion.a>
         <motion.a
           href="tel:8564921879"
@@ -210,4 +201,4 @@ const Home: NextPage = () => {
     </motion.section>
   );
 };
-export default Home;
+export default Contact;
