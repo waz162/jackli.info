@@ -34,7 +34,7 @@ export const experiencesData = [
     title: "Software Engineer at What If Media Group",
     location: "Fort Lee, NJ",
     description:
-      "Full-stack developer on a small team. I build and maintain web applications across the stack with React, TypeScript, AWS, DynamoDB, PHP, AJAX, and MariaDB.",
+      "Full-stack developer building and maintaining web applications across the stack with React, TypeScript, AWS, DynamoDB, PHP, AJAX, and MariaDB.",
     icon: React.createElement(CgWorkAlt),
     date: "2021 - Present",
   },

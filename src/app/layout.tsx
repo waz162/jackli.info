@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Jack Li | Software Engineer",
   description:
-    "Portfolio of Jack Li, a full-stack software engineer at What If Media Group. React, TypeScript, AWS, and more.",
+    "Portfolio of Jack Li, a full-stack software engineer building web applications with React, TypeScript, AWS, and more.",
 };
 
 // eslint-disable-next-line react-refresh/only-export-components

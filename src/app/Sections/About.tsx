@@ -6,7 +6,7 @@ import { useSectionInView } from "../Lib/hooks";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
-import { AiFillLinkedin, AiFillInstagram, AiFillGithub } from "react-icons/ai";
+import { AiFillInstagram, AiFillGithub } from "react-icons/ai";
 import pic_of_me from "../../../public/pic_of_me.png";
 import { useActiveSectionContext } from "../Context/ActiveSectionContext";
 
@@ -69,7 +69,7 @@ const About: React.FC = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Software Engineer at What If Media Group
+        Full-Stack Software Engineer
       </motion.h3>
       <motion.p
         className="text-md m:leading-15 sm:text-md mx-auto max-w-lg py-5 leading-7 text-slate-700 dark:text-slate-200 sm:leading-10 md:text-lg"
@@ -107,14 +107,6 @@ const About: React.FC = () => {
             whileTap={{ scale: 0.9 }}
           >
             <AiFillGithub />
-          </motion.a>
-          <motion.a
-            href="https://www.linkedin.com/in/jackli140/"
-            className="hover:text-teal-500"
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <AiFillLinkedin />
           </motion.a>
           <motion.a
             href="https://www.instagram.com/jackli17/"
