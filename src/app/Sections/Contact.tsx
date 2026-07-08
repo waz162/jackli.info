@@ -1,4 +1,5 @@
-import type { NextPage } from "next";
+"use client";
+
 import { useForm } from "react-hook-form";
 import useWeb3forms from "@web3forms/react";
 import { motion } from "framer-motion";
@@ -14,7 +15,7 @@ interface FormData {
   subject: string;
   message: string;
 }
-const Home: NextPage = () => {
+const Contact = () => {
   const { ref } = useSectionInView("Contact");
   // for submit message
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
@@ -210,4 +211,4 @@ const Home: NextPage = () => {
     </motion.section>
   );
 };
-export default Home;
+export default Contact;

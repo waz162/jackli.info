@@ -32,8 +32,15 @@ const About: React.FC = () => {
             duration: 0.2,
           }}
         >
-          <div className="relative mx-auto mt-10 h-40 w-40 overflow-hidden rounded-full border-[0.35rem] border-white bg-gradient-to-b from-teal-500 shadow-xl dark:border-slate-100 sm:h-80 sm:w-80 md:h-96 md:w-96 ">
-            <Image src={pic_of_me} objectFit="cover" alt="cartoon avatar" />
+          <div className="relative mx-auto mt-10 h-40 w-40 overflow-hidden rounded-full border-[0.35rem] border-white bg-gradient-to-b from-teal-500 shadow-xl dark:border-slate-100 sm:h-80 sm:w-80 md:h-96 md:w-96">
+            <Image
+              src={pic_of_me}
+              alt="Jack Li"
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 10rem, 30vh"
+              priority
+            />
           </div>
           <motion.span
             className="absolute bottom-2 right-2 text-4xl"
@@ -128,8 +135,15 @@ const About: React.FC = () => {
             duration: 0.2,
           }}
         >
-          <div className="relative mx-auto mt-10 h-40 w-40 overflow-hidden rounded-full border-[0.35rem] border-white bg-gradient-to-b from-teal-500 shadow-xl dark:border-slate-100 md:h-[30vh] md:w-[30vh]">
-            <Image src={pic_of_me} objectFit="cover" alt="cartoon avatar" />
+          <div className="relative mx-auto mt-10 h-40 w-40 overflow-hidden rounded-full border-[0.35rem] border-white bg-gradient-to-b from-teal-500 shadow-xl dark:border-slate-100 md:h-[30vh] md:w-[30vh] md:min-h-[10rem] md:min-w-[10rem]">
+            <Image
+              src={pic_of_me}
+              alt="Jack Li"
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 10rem, 30vh"
+              priority
+            />
           </div>
           <motion.span
             className="absolute bottom-9 right-9 text-6xl md:bottom-9 md:right-9"
