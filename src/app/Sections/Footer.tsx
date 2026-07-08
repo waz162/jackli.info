@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex items-center justify-center py-4 text-center text-gray-400">
-      <p className="text-xs sm:text-sm">
+    <footer className="flex max-w-full flex-col items-center justify-center gap-3 px-4 py-4 text-center text-gray-400 sm:flex-row sm:gap-4">
+      <p className="max-w-full text-xs sm:text-sm">
         Whoa! You made it all the way to the bottom. This page was roughly
         designed in{" "}
         <a
