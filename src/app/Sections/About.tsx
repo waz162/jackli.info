@@ -69,16 +69,16 @@ const About: React.FC = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Full-Stack Software Engineer
+        Full-Stack Engineer · AI Products
       </motion.h3>
       <motion.p
         className="text-md m:leading-15 sm:text-md mx-auto max-w-lg py-5 leading-7 text-slate-700 dark:text-slate-200 sm:leading-10 md:text-lg"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Tech enthusiast, code aficionado. From building smarter rain barrels to
-        whipping up AI-powered recipes, I bring a dash of innovation to every
-        byte. Let&apos;s turn ideas into reality through lines of code!
+        I build full-stack products with AI at the core — from on-device
+        Foundation Models in RecipeBox to LLM-powered workflows in production.
+        Curious, hands-on, and always shipping the next intelligent feature.
       </motion.p>
       <motion.div
         className="justify-center gap-10 py-3 text-5xl text-slate-600 sm:flex sm:gap-16"
