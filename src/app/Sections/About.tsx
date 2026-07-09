@@ -37,7 +37,7 @@ const About: React.FC = () => {
               src={pic_of_me}
               alt="Jack Li"
               fill
-              className="object-cover"
+              className="object-cover object-[center_20%]"
               sizes="(max-width: 640px) 10rem, 30vh"
               priority
             />
@@ -132,7 +132,7 @@ const About: React.FC = () => {
               src={pic_of_me}
               alt="Jack Li"
               fill
-              className="object-cover"
+              className="object-cover object-[center_20%]"
               sizes="(max-width: 640px) 10rem, 30vh"
               priority
             />
