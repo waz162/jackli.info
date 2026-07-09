@@ -48,17 +48,21 @@ export default function Experience() {
             <VerticalTimelineElement
               contentStyle={{
                 background:
-                  theme === "light" ? "#f1f5f9" : "rgba(255, 255, 255, 0.05)",
+                  theme === "light" ? "#f1f5f9" : "rgba(15, 23, 42, 0.65)",
                 boxShadow: "none",
-                border: "1px solid rgba(0, 0, 0, 0.05)",
+                border:
+                  theme === "light"
+                    ? "1px solid rgba(15, 23, 42, 0.06)"
+                    : "1px solid rgba(45, 212, 191, 0.15)",
+                borderRadius: "0.75rem",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
               }}
               contentArrowStyle={{
                 borderRight:
                   theme === "light"
-                    ? "0.4rem solid #9ca3af"
-                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
+                    ? "0.4rem solid #94a3b8"
+                    : "0.4rem solid rgba(45, 212, 191, 0.35)",
               }}
               date={item.date}
               icon={item.icon}
@@ -71,7 +75,7 @@ export default function Experience() {
                 boxShadow:
                   theme === "light"
                     ? "0 0 0 4px rgba(45, 212, 191, 0.25)"
-                    : "0 0 0 4px rgba(45, 212, 191, 0.2)",
+                    : "0 0 0 4px rgba(45, 212, 191, 0.25)",
                 fontSize: "1.5rem",
               }}
             >

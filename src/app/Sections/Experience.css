@@ -1,5 +1,5 @@
 .dark .vertical-timeline-element-date {
-  color: white;
+  color: #cbd5e1;
 }
 .vertical-timeline-element-date {
   color: rgb(88, 101, 113);
@@ -16,4 +16,12 @@
 }
 .dark .vertical-timeline-element-icon {
   color: #99f6e4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vertical-timeline--animate .vertical-timeline-element-icon.bounce-in,
+  .vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
+    animation: none !important;
+    visibility: visible !important;
+  }
 }

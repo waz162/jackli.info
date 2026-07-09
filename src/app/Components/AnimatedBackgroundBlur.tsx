@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, Variants } from "framer-motion";
+import { motion, useReducedMotion, Variants } from "framer-motion";
 
 interface AnimationVariants extends Variants {
   start: {
@@ -42,6 +42,8 @@ const animationVariants: AnimationVariants = {
 };
 
 function AnimatedElements() {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <div
       aria-hidden="true"
@@ -50,13 +52,13 @@ function AnimatedElements() {
       <motion.div
         className="absolute -right-24 top-[-6rem] h-[20rem] w-[20rem] rounded-full bg-[#ffc7c9] blur-[10rem] dark:bg-[#963e40] sm:right-[11rem] sm:h-[31.25rem] sm:w-[31.25rem] sm:blur-[10rem] md:w-[50rem] lg:w-[68.75rem]"
         initial="start"
-        animate="end"
+        animate={prefersReducedMotion ? "start" : "end"}
         variants={animationVariants}
       ></motion.div>
       <motion.div
         className="absolute -left-24 top-[-1rem] h-[20rem] w-[20rem] rounded-full bg-[#bdb4ff] blur-[10rem] dark:bg-[#49459a] sm:-left-48 sm:h-[31.25rem] sm:w-[50rem] md:-left-[33rem] lg:-left-[28rem] xl:-left-[15rem] 2xl:-left-[5rem] lg:w-[68.75rem]"
         initial="start"
-        animate="end"
+        animate={prefersReducedMotion ? "start" : "end"}
         variants={animationVariants}
       ></motion.div>
     </div>
