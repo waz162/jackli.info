@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import { AiFillInstagram, AiFillGithub } from "react-icons/ai";
-import pic_of_me from "../../../public/pic_of_me.png";
+import pic_of_me from "../../../public/pic_of_me.jpg";
 import { useActiveSectionContext } from "../Context/ActiveSectionContext";
 
 // Import the CSS file
