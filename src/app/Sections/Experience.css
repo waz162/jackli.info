@@ -4,6 +4,16 @@
 .vertical-timeline-element-date {
   color: rgb(88, 101, 113);
 }
+.vertical-timeline-element-icon svg {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+}
 .dark .vertical-timeline-element-icon {
-  color: white;
+  color: #99f6e4;
 }

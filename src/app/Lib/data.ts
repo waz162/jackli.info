@@ -1,11 +1,16 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { LuGraduationCap, LuSearch } from "react-icons/lu";
-import { PiIdentificationBadgeBold } from "react-icons/pi";
-import jackLiLogoImg from "../../../public/jack-li-logo.png";
-import codeImg from "../../../public/code.png";
-import consultingImg from "../../../public/consulting.png";
-import recippyImg from "../../../public/recippy.png";
+import {
+  LuBrainCircuit,
+  LuCode2,
+  LuDroplets,
+  LuFlaskConical,
+  LuGraduationCap,
+  LuSchool,
+} from "react-icons/lu";
+import recipeBoxImg from "../../../public/project-recipebox.jpg";
+import jackLiImg from "../../../public/project-jackli.jpg";
+import leetcodeImg from "../../../public/project-leetcode.jpg";
+import complexityImg from "../../../public/project-complexity.jpg";
 
 export const links = [
   {
@@ -35,15 +40,15 @@ export const experiencesData = [
     title: "Software Engineer at What If Media Group",
     location: "Fort Lee, NJ",
     description:
-      "Full-stack developer building and maintaining web applications across the stack with React, TypeScript, AWS, DynamoDB, PHP, AJAX, and MariaDB.",
-    icon: React.createElement(CgWorkAlt),
+      "Full-stack engineer building AI-assisted product features and data-driven web apps with React, TypeScript, and AWS. Integrate LLM-powered workflows into production systems and ship intelligent tooling across DynamoDB, PHP, and MariaDB services.",
+    icon: React.createElement(LuBrainCircuit),
     date: "2021 - Present",
   },
   {
     title: "Masters Student at Stevens Institute of Technology",
     location: "Hoboken, NJ",
     description:
-      "Graduated from an accelerated Master's program in Engineering Management with a focus on data-driven strategies. Applied analytics and decision-making techniques to improve engineering project outcomes.",
+      "Graduated from an accelerated Master's in Engineering Management with a focus on AI-informed, data-driven decision making. Applied analytics and machine learning concepts to improve engineering project outcomes.",
     icon: React.createElement(LuGraduationCap),
     date: "2021 - 2022",
   },
@@ -51,42 +56,43 @@ export const experiencesData = [
     title: "Software Engineering Intern at What If Media Group",
     location: "Fort Lee, NJ",
     description:
-      "Optimized legacy web pages, improving average page load times by 35%. The work increased user engagement by 20% and conversion rates by 15% on the updated pages.",
-    icon: React.createElement(PiIdentificationBadgeBold),
+      "Optimized legacy web pages and instrumentation, improving average page load times by 35%. Used performance data and experimentation insights to lift engagement by 20% and conversion by 15% on updated pages.",
+    icon: React.createElement(LuCode2),
     date: "2021 - 2022",
   },
   {
     title: "Undergraduate Student at Stevens Institute of Technology",
     location: "Hoboken, NJ",
-    description: "Graduated with a Bachelor's in Software Engineering.",
-    icon: React.createElement(LuGraduationCap),
+    description:
+      "Graduated with a Bachelor's in Software Engineering, with coursework spanning algorithms, systems, and applied AI/ML foundations.",
+    icon: React.createElement(LuSchool),
     date: "2017 - 2021",
   },
   {
     title: "Infection Simulation Researcher",
     location: "Hoboken, NJ",
     description:
-      "Conducted research in crowd simulation and pathogen modeling using C#. Built a plugin-based program with A* pathfinding and C-Drive algorithms, and modeled disease spread with EXPOSED and air circulation techniques in Unity.",
-    icon: React.createElement(LuSearch),
+      "Built agent-based crowd and pathogen simulations in Unity/C#, combining A* pathfinding with EXPOSED and air-circulation models to study how infections spread through intelligent agent behavior.",
+    icon: React.createElement(LuFlaskConical),
     date: "2020",
   },
   {
     title: "Smart Rain Barrel Researcher",
     location: "Hoboken, NJ",
     description:
-      "Worked on a small engineering team to build smart rain barrels using Raspberry Pis, Python, and MongoDB. Used pandas for data analysis to design an optimal rain collection and water dispersion strategy for Hoboken storm drainage.",
-    icon: React.createElement(LuSearch),
+      "Built IoT smart rain barrels with Raspberry Pis, Python, and MongoDB. Used pandas-driven analysis to optimize collection and dispersion strategies for Hoboken storm drainage — an early data/ML systems project.",
+    icon: React.createElement(LuDroplets),
     date: "June 2019 - August 2019",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "Recippy",
+    title: "RecipeBox",
     description:
-      "A native SwiftUI cookbook app that imports recipes from the web, YouTube, and TikTok using on-device Apple Foundation Models, with SwiftData + iCloud sync, cook mode, and full recipe editing.",
-    tags: ["SwiftUI", "SwiftData", "Foundation Models", "CloudKit", "iOS"],
-    imageUrl: recippyImg,
+      "AI-powered SwiftUI cookbook that imports recipes from the web, YouTube, and TikTok using on-device Apple Foundation Models — with SwiftData + iCloud sync, full editing, and private, offline parsing.",
+    tags: ["SwiftUI", "Foundation Models", "SwiftData", "CloudKit", "iOS"],
+    imageUrl: recipeBoxImg,
     link: "https://github.com/waz162/RecipeBox",
   },
   {
@@ -94,7 +100,7 @@ export const projectsData = [
     description:
       "My personal portfolio site, designed in Figma and built with Next.js, React, and Tailwind CSS. Deployed to GitHub Pages with animated sections and a contact form.",
     tags: ["React", "Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-    imageUrl: jackLiLogoImg,
+    imageUrl: jackLiImg,
     link: "https://github.com/waz162/jackli.info",
   },
   {
@@ -102,7 +108,7 @@ export const projectsData = [
     description:
       "A growing collection of algorithm and data structure problems solved in Python, focused on clean implementations and consistent problem-solving patterns.",
     tags: ["Python", "Algorithms", "Data Structures"],
-    imageUrl: codeImg,
+    imageUrl: leetcodeImg,
     link: "https://github.com/waz162/leetcode",
   },
   {
@@ -110,7 +116,7 @@ export const projectsData = [
     description:
       "A JavaScript project exploring computational complexity concepts through interactive examples and experiments.",
     tags: ["JavaScript", "Algorithms", "Computer Science"],
-    imageUrl: consultingImg,
+    imageUrl: complexityImg,
     link: "https://github.com/waz162/Complexity",
   },
 ] as const;
@@ -118,21 +124,24 @@ export const projectsData = [
 export const skillsData = [
   "JavaScript",
   "TypeScript",
-  "HTML",
-  "CSS",
   "Python",
-  "PHP",
+  "Swift",
+  "SwiftUI",
   "React",
   "Next.js",
-  "Angular",
   "Node.js",
+  "Foundation Models",
+  "LLMs",
   "AWS",
   "Docker",
+  "Kubernetes",
   "MongoDB",
-  "MariaDB",
   "DynamoDB",
+  "MariaDB",
+  "PHP",
+  "Angular",
+  "HTML",
+  "CSS",
   "Git & GitHub",
-  "Chrome DevTools",
-  "Postman",
   "Framer Motion",
 ] as const;

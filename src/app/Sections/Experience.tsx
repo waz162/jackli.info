@@ -63,7 +63,15 @@ export default function Experience() {
               date={item.date}
               icon={item.icon}
               iconStyle={{
-                background: theme === "light" ? "#e2e8f0" : "#475569",
+                background:
+                  theme === "light"
+                    ? "linear-gradient(145deg, #ccfbf1, #99f6e4)"
+                    : "linear-gradient(145deg, #134e4a, #0f766e)",
+                color: theme === "light" ? "#0f766e" : "#99f6e4",
+                boxShadow:
+                  theme === "light"
+                    ? "0 0 0 4px rgba(45, 212, 191, 0.25)"
+                    : "0 0 0 4px rgba(45, 212, 191, 0.2)",
                 fontSize: "1.5rem",
               }}
             >

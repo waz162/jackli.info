@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import { AiFillInstagram, AiFillGithub } from "react-icons/ai";
-import pic_of_me from "../../../public/pic_of_me.jpg";
+import pic_of_me from "../../../public/pic_of_me.jpeg";
 import { useActiveSectionContext } from "../Context/ActiveSectionContext";
 
 // Import the CSS file
@@ -37,7 +37,7 @@ const About: React.FC = () => {
               src={pic_of_me}
               alt="Jack Li"
               fill
-              className="scale-[1.45] object-cover object-[center_18%]"
+              className="scale-[2.4] object-cover object-[center_38%]"
               sizes="(max-width: 640px) 10rem, 30vh"
               priority
             />
@@ -132,7 +132,7 @@ const About: React.FC = () => {
               src={pic_of_me}
               alt="Jack Li"
               fill
-              className="scale-[1.45] object-cover object-[center_18%]"
+              className="scale-[2.4] object-cover object-[center_38%]"
               sizes="(max-width: 640px) 10rem, 30vh"
               priority
             />

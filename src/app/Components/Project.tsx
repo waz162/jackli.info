@@ -46,10 +46,10 @@ export default function Project({
       <Image
         src={imageUrl}
         alt={title}
-        width={452}
-        height={300}
+        width={640}
+        height={400}
         quality={95}
-        className="absolute -right-40 top-8 hidden w-[28.25rem] rounded-t-lg shadow-2xl transition group-even:-left-40 group-even:right-[initial] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-[1.04] group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 sm:block"
+        className="absolute -right-10 top-10 hidden w-[22rem] rounded-lg object-cover shadow-2xl transition group-even:-left-10 group-even:right-[initial] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-[1.04] group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 sm:block"
       />
     </section>
   );
