@@ -5,6 +5,7 @@ import { PiIdentificationBadgeBold } from "react-icons/pi";
 import jackLiLogoImg from "../../../public/jack-li-logo.png";
 import codeImg from "../../../public/code.png";
 import consultingImg from "../../../public/consulting.png";
+import recippyImg from "../../../public/recippy.png";
 
 export const links = [
   {
@@ -80,6 +81,14 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "Recippy",
+    description:
+      "A native SwiftUI cookbook app that imports recipes from the web, YouTube, and TikTok using on-device Apple Foundation Models, with SwiftData + iCloud sync, cook mode, and full recipe editing.",
+    tags: ["SwiftUI", "SwiftData", "Foundation Models", "CloudKit", "iOS"],
+    imageUrl: recippyImg,
+    link: "https://github.com/waz162/RecipeBox",
+  },
   {
     title: "jackli.info",
     description:
