@@ -7,13 +7,9 @@ import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function Project({
-  title,
-  description,
-  tags,
-  imageUrl,
-  link,
-}: ProjectProps) {
+export default function Project(project: ProjectProps) {
+  const { title, description, tags, imageUrl, link } = project;
+  const contained = "contained" in project && project.contained;
   const ref = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({
@@ -50,7 +46,11 @@ export default function Project({
         width={640}
         height={400}
         quality={95}
-        className="absolute -right-10 top-10 hidden w-[22rem] rounded-lg object-cover shadow-2xl ring-1 ring-black/5 transition dark:ring-white/10 motion-safe:group-hover:-translate-x-3 motion-safe:group-hover:translate-y-3 motion-safe:group-hover:-rotate-2 motion-safe:group-hover:scale-[1.04] group-even:-left-10 group-even:right-[initial] motion-safe:group-even:group-hover:translate-x-3 motion-safe:group-even:group-hover:translate-y-3 motion-safe:group-even:group-hover:rotate-2 sm:block"
+        className={
+          contained
+            ? "absolute inset-y-5 right-5 hidden w-[48%] rounded-lg object-contain shadow-2xl ring-1 ring-black/5 transition dark:ring-white/10 motion-safe:group-hover:scale-[1.03] sm:block"
+            : "absolute -right-10 top-10 hidden w-[22rem] rounded-lg object-cover shadow-2xl ring-1 ring-black/5 transition dark:ring-white/10 motion-safe:group-hover:-translate-x-3 motion-safe:group-hover:translate-y-3 motion-safe:group-hover:-rotate-2 motion-safe:group-hover:scale-[1.04] group-even:-left-10 group-even:right-[initial] motion-safe:group-even:group-hover:translate-x-3 motion-safe:group-even:group-hover:translate-y-3 motion-safe:group-even:group-hover:rotate-2 sm:block"
+        }
       />
     </section>
   );

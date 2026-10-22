@@ -94,6 +94,7 @@ export const projectsData = [
     tags: ["SwiftUI", "Foundation Models", "SwiftData", "CloudKit", "iOS"],
     imageUrl: recippyImg,
     link: "https://apps.apple.com/app/id6819073543",
+    contained: true,
   },
   {
     title: "jackli.info",
