@@ -10,7 +10,7 @@ const PortfolioSection: React.FC = () => {
   const { ref } = useSectionInView("Portfolio");
 
   return (
-    <section ref={ref} id="portfolio" className="scroll-mt-2 pb-10">
+    <section ref={ref} id="portfolio" className="scroll-mt-28 pb-10">
       <SectionHeading>Portfolio</SectionHeading>
       <div>
         {projectsData.map((project) => (
