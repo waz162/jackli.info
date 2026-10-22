@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://jackli.info"),
   title: "Jack Li · AI Products",
   description:
-    "Full-stack engineer building AI-powered products — on-device Foundation Models, LLM workflows, and modern web apps.",
+    "Full-stack engineer building AI-powered products — Recippy on the App Store, on-device Foundation Models, LLM workflows, and modern web apps.",
   openGraph: {
     title: "Jack Li · AI Products",
     description:
-      "Full-stack engineer building AI-powered products — on-device Foundation Models, LLM workflows, and modern web apps.",
+      "Full-stack engineer building AI-powered products — Recippy on the App Store, on-device Foundation Models, LLM workflows, and modern web apps.",
     url: "https://jackli.info",
     siteName: "Jack Li",
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Jack Li · AI Products",
     description:
-      "Full-stack engineer building AI-powered products — on-device Foundation Models, LLM workflows, and modern web apps.",
+      "Full-stack engineer building AI-powered products — Recippy on the App Store, on-device Foundation Models, LLM workflows, and modern web apps.",
     images: ["/jack-li-logo.png"],
   },
 };

@@ -7,7 +7,7 @@ import {
   LuGraduationCap,
   LuSchool,
 } from "react-icons/lu";
-import recipeBoxImg from "../../../public/project-recipebox.jpg";
+import recippyImg from "../../../public/project-recippy.jpg";
 import jackLiImg from "../../../public/project-jackli.jpg";
 import leetcodeImg from "../../../public/project-leetcode.jpg";
 import complexityImg from "../../../public/project-complexity.jpg";
@@ -88,12 +88,12 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "RecipeBox",
+    title: "Recippy",
     description:
-      "AI-powered SwiftUI cookbook that imports recipes from the web, YouTube, and TikTok using on-device Apple Foundation Models — with SwiftData + iCloud sync, full editing, and private, offline parsing.",
+      "A cosy SwiftUI recipe book on the App Store. Save from any site, video or cookbook, cook step by step with a kitchen companion, and keep a shopping list — with on-device Apple Foundation Models and iCloud sync.",
     tags: ["SwiftUI", "Foundation Models", "SwiftData", "CloudKit", "iOS"],
-    imageUrl: recipeBoxImg,
-    link: "https://github.com/waz162/RecipeBox",
+    imageUrl: recippyImg,
+    link: "https://apps.apple.com/app/id6819073543",
   },
   {
     title: "jackli.info",

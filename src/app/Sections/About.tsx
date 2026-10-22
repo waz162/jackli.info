@@ -91,7 +91,7 @@ const About: React.FC = () => {
         animate={fadeUp.animate}
       >
         I build full-stack products with AI at the core — from on-device
-        Foundation Models in RecipeBox to LLM-powered workflows in production.
+        Foundation Models in Recippy to LLM-powered workflows in production.
         Curious, hands-on, and always shipping the next intelligent feature.
       </motion.p>
       <motion.div
