@@ -60,7 +60,7 @@ const About: React.FC = () => {
         initial={fadeUp.initial}
         animate={fadeUp.animate}
       >
-        <h2 className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-5xl font-black text-transparent md:text-6xl">
+        <h2 className="bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-5xl font-black text-transparent md:text-6xl">
           Jack Li
         </h2>
         <motion.span

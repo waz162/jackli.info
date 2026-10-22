@@ -8,6 +8,74 @@ body {
   max-width: 100%;
 }
 
+/* Soft colour wash. Radial gradients stay on the compositor, so they can drift
+   without the full-viewport blur that was repainting every frame. */
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+  pointer-events: none;
+  contain: paint;
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 9999px;
+  will-change: transform;
+}
+
+.ambient-orb-pink {
+  top: -8rem;
+  right: -6rem;
+  width: min(64rem, 110vw);
+  height: 34rem;
+  background: radial-gradient(
+    closest-side,
+    #ffc7c9 0%,
+    rgba(255, 199, 201, 0) 72%
+  );
+  animation: ambient-drift 40s ease-in-out infinite alternate;
+}
+
+.dark .ambient-orb-pink {
+  background: radial-gradient(
+    closest-side,
+    #963e40 0%,
+    rgba(150, 62, 64, 0) 72%
+  );
+}
+
+.ambient-orb-violet {
+  top: -4rem;
+  left: -10rem;
+  width: min(64rem, 110vw);
+  height: 34rem;
+  background: radial-gradient(
+    closest-side,
+    #bdb4ff 0%,
+    rgba(189, 180, 255, 0) 72%
+  );
+  animation: ambient-drift 48s ease-in-out infinite alternate-reverse;
+}
+
+.dark .ambient-orb-violet {
+  background: radial-gradient(
+    closest-side,
+    #49459a 0%,
+    rgba(73, 69, 154, 0) 72%
+  );
+}
+
+@keyframes ambient-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(6vw, 10vh, 0);
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

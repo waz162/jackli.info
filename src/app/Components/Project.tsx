@@ -1,23 +1,13 @@
 "use client";
 
-import { useRef } from "react";
 import { projectsData } from "../Lib/data";
 import Image from "next/image";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 
 type ProjectProps = (typeof projectsData)[number];
 
 export default function Project(project: ProjectProps) {
   const { title, description, tags, imageUrl, link } = project;
   const contained = "contained" in project && project.contained;
-  const ref = useRef<HTMLDivElement>(null);
-  const prefersReducedMotion = useReducedMotion();
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   const content = (
     <section
@@ -77,18 +67,7 @@ export default function Project(project: ProjectProps) {
   );
 
   return (
-    <motion.div
-      ref={ref}
-      style={
-        prefersReducedMotion
-          ? undefined
-          : {
-              scale: scaleProgress,
-              opacity: opacityProgress,
-            }
-      }
-      className="group mb-3 last:mb-0 sm:mb-8"
-    >
+    <div className="group mb-3 last:mb-0 sm:mb-8">
       {link ? (
         <a
           href={link}
@@ -101,6 +80,6 @@ export default function Project(project: ProjectProps) {
       ) : (
         content
       )}
-    </motion.div>
+    </div>
   );
 }
