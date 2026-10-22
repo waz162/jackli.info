@@ -90,7 +90,7 @@ export const projectsData = [
   {
     title: "Recippy",
     description:
-      "A cosy SwiftUI recipe book on the App Store. Save from any site, video or cookbook, cook step by step with a kitchen companion, and keep a shopping list — with on-device Apple Foundation Models and iCloud sync.",
+      "A cosy SwiftUI recipe book on the App Store. Save from any site, video or cookbook, then cook with a companion and a shopping list.",
     tags: ["SwiftUI", "Foundation Models", "SwiftData", "CloudKit", "iOS"],
     imageUrl: recippyImg,
     link: "https://apps.apple.com/app/id6819073543",
