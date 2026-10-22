@@ -20,15 +20,27 @@ export default function Project(project: ProjectProps) {
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   const content = (
-    <section className="relative mx-auto max-w-[42rem] overflow-hidden rounded-lg border border-slate-200 bg-slate-100 transition hover:border-teal-300/60 hover:bg-slate-200/80 dark:border-slate-700 dark:bg-slate-800/80 dark:text-white dark:hover:border-teal-500/40 dark:hover:bg-slate-700/90 sm:h-[20rem] sm:pr-8 sm:group-even:pl-8">
-      <div className="flex h-full flex-col px-5 pb-7 pt-4 sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-[18rem]">
+    <section
+      className={
+        contained
+          ? "relative mx-auto grid max-w-5xl overflow-hidden rounded-lg border border-slate-200 bg-slate-100 transition hover:border-teal-300/60 hover:bg-slate-200/80 dark:border-slate-700 dark:bg-slate-800/80 dark:text-white dark:hover:border-teal-500/40 dark:hover:bg-slate-700/90 sm:grid-cols-[minmax(16rem,0.9fr)_minmax(20rem,1.25fr)] sm:items-center"
+          : "relative mx-auto max-w-[42rem] overflow-hidden rounded-lg border border-slate-200 bg-slate-100 transition hover:border-teal-300/60 hover:bg-slate-200/80 dark:border-slate-700 dark:bg-slate-800/80 dark:text-white dark:hover:border-teal-500/40 dark:hover:bg-slate-700/90 sm:h-[20rem] sm:pr-8 sm:group-even:pl-8"
+      }
+    >
+      <div
+        className={
+          contained
+            ? "flex h-full flex-col px-5 pb-7 pt-4 sm:py-10 sm:pl-10 sm:pr-6"
+            : "flex h-full flex-col px-5 pb-7 pt-4 sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-[18rem]"
+        }
+      >
         <h3 className="text-2xl font-semibold text-slate-800 dark:text-slate-100">
           {title}
         </h3>
         <p className="mt-2 leading-relaxed text-slate-700 dark:text-slate-200">
           {description}
         </p>
-        <ul className="mt-4 flex flex-wrap gap-2 sm:mt-auto">
+        <ul className="mt-4 flex flex-wrap gap-2 sm:mt-auto sm:pt-6">
           {tags.map((tag, index) => (
             <li
               className="rounded-full bg-teal-500/10 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-teal-700 dark:bg-teal-400/10 dark:text-teal-300"
@@ -40,18 +52,27 @@ export default function Project(project: ProjectProps) {
         </ul>
       </div>
 
-      <Image
-        src={imageUrl}
-        alt={title}
-        width={640}
-        height={400}
-        quality={95}
-        className={
-          contained
-            ? "absolute inset-y-5 right-5 hidden w-[48%] rounded-lg object-contain shadow-2xl ring-1 ring-black/5 transition dark:ring-white/10 motion-safe:group-hover:scale-[1.03] sm:block"
-            : "absolute -right-10 top-10 hidden w-[22rem] rounded-lg object-cover shadow-2xl ring-1 ring-black/5 transition dark:ring-white/10 motion-safe:group-hover:-translate-x-3 motion-safe:group-hover:translate-y-3 motion-safe:group-hover:-rotate-2 motion-safe:group-hover:scale-[1.04] group-even:-left-10 group-even:right-[initial] motion-safe:group-even:group-hover:translate-x-3 motion-safe:group-even:group-hover:translate-y-3 motion-safe:group-even:group-hover:rotate-2 sm:block"
-        }
-      />
+      {contained ? (
+        <div className="hidden p-5 sm:block sm:p-6 sm:pl-0">
+          <Image
+            src={imageUrl}
+            alt={title}
+            width={1280}
+            height={853}
+            quality={95}
+            className="h-auto w-full rounded-lg object-contain shadow-2xl ring-1 ring-black/5 dark:ring-white/10"
+          />
+        </div>
+      ) : (
+        <Image
+          src={imageUrl}
+          alt={title}
+          width={640}
+          height={400}
+          quality={95}
+          className="absolute -right-10 top-10 hidden w-[22rem] rounded-lg object-cover shadow-2xl ring-1 ring-black/5 transition dark:ring-white/10 motion-safe:group-hover:-translate-x-3 motion-safe:group-hover:translate-y-3 motion-safe:group-hover:-rotate-2 motion-safe:group-hover:scale-[1.04] group-even:-left-10 group-even:right-[initial] motion-safe:group-even:group-hover:translate-x-3 motion-safe:group-even:group-hover:translate-y-3 motion-safe:group-even:group-hover:rotate-2 sm:block"
+        />
+      )}
     </section>
   );
 
