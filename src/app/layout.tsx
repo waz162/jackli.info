@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth overflow-x-hidden">
+    <html lang="en" className="overflow-x-hidden">
       <body
         className={`${inter.className} overflow-x-hidden bg-gray-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100`}
       >
