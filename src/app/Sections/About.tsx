@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import { useSectionInView } from "../Lib/hooks";
 import { motion, useReducedMotion } from "framer-motion";
-import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import { AiFillInstagram, AiFillGithub } from "react-icons/ai";
 import pic_of_me from "../../../public/pic_of_me.jpeg";
@@ -102,17 +101,23 @@ const About: React.FC = () => {
           delay: prefersReducedMotion ? 0 : 0.1,
         }}
       >
-        <Link
-          href="#contact"
-          className="group flex items-center gap-2 rounded-full border-none bg-gradient-to-r from-teal-500 to-cyan-500 px-7 py-3 text-lg text-slate-100 shadow-xl outline-none transition motion-safe:hover:scale-110 motion-safe:focus:scale-110 motion-safe:active:scale-105 dark:text-slate-200"
+        <button
+          type="button"
+          className="group flex cursor-pointer items-center gap-2 rounded-full border-none bg-gradient-to-r from-teal-500 to-cyan-500 px-7 py-3 font-[inherit] text-lg text-slate-100 shadow-xl outline-none transition motion-safe:hover:scale-110 motion-safe:focus:scale-110 motion-safe:active:scale-105 dark:text-slate-200"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
+            const section = document.getElementById("contact");
+            if (!section) return;
+            const top =
+              section.getBoundingClientRect().top + window.scrollY - 112;
+            window.scrollTo({ top: Math.max(0, top) });
+            history.replaceState(null, "", "#contact");
           }}
         >
           Contact me here{" "}
           <BsArrowRight className="opacity-70 transition motion-safe:group-hover:translate-x-1" />
-        </Link>
+        </button>
         <div className="mt-5 flex justify-center gap-5 dark:text-slate-200 sm:mt-0 sm:flex-none sm:gap-10">
           <motion.a
             href="https://github.com/waz162"

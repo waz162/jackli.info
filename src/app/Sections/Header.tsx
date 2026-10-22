@@ -3,10 +3,27 @@
 import { links } from "../Lib/data";
 import clsx from "clsx";
 import { useActiveSectionContext } from "../Context/ActiveSectionContext";
+import type { SectionName } from "../Lib/types";
+
+const headerOffset = 112;
+
+function scrollToSection(hash: string) {
+  const section = document.getElementById(hash.slice(1));
+  if (!section) return;
+  const top = section.getBoundingClientRect().top + window.scrollY - headerOffset;
+  window.scrollTo({ top: Math.max(0, top) });
+  history.replaceState(null, "", hash);
+}
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+
+  const openSection = (name: SectionName, hash: string) => {
+    setActiveSection(name);
+    setTimeOfLastClick(Date.now());
+    scrollToSection(hash);
+  };
 
   return (
     <header className="relative z-[999]">
@@ -19,29 +36,22 @@ export default function Header() {
               className="relative flex h-3/4 items-center justify-center"
               key={link.hash}
             >
-              <a
+              <button
+                type="button"
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-teal-600 dark:text-slate-500 dark:hover:text-teal-200",
+                  "flex w-full cursor-pointer items-center justify-center border-0 bg-transparent px-3 py-3 font-[inherit] text-inherit hover:text-teal-600 dark:text-slate-500 dark:hover:text-teal-200",
                   {
                     "text-teal-500 dark:text-teal-400":
                       activeSection === link.name,
                   },
                 )}
-                href={link.hash}
-                onClick={(event) => {
-                  event.preventDefault();
-                  setActiveSection(link.name);
-                  setTimeOfLastClick(Date.now());
-                  document.querySelector(link.hash)?.scrollIntoView({
-                    block: "start",
-                  });
-                }}
+                onClick={() => openSection(link.name, link.hash)}
               >
                 {link.name}
                 {link.name === activeSection && (
                   <span className="absolute inset-0 -z-10 rounded-full bg-slate-100 dark:bg-slate-800" />
                 )}
-              </a>
+              </button>
             </li>
           ))}
         </ul>
