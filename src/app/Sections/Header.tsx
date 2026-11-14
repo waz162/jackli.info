@@ -5,12 +5,13 @@ import clsx from "clsx";
 import { useActiveSectionContext } from "../Context/ActiveSectionContext";
 import type { SectionName } from "../Lib/types";
 
-const headerOffset = 112;
+const headerOffset = 88;
 
 function scrollToSection(hash: string) {
   const section = document.getElementById(hash.slice(1));
   if (!section) return;
-  const top = section.getBoundingClientRect().top + window.scrollY - headerOffset;
+  const top =
+    section.getBoundingClientRect().top + window.scrollY - headerOffset;
   window.scrollTo({ top: Math.max(0, top) });
   history.replaceState(null, "", hash);
 }
@@ -27,19 +28,19 @@ export default function Header() {
 
   return (
     <header className="relative z-[999]">
-      <div className="pointer-events-none fixed left-1/2 top-0 h-[4.5rem] w-full -translate-x-1/2 rounded-none border border-white/40 bg-white/95 shadow-lg shadow-black/[0.03] dark:border-black/40 dark:bg-slate-950/95 sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full" />
+      <div className="pointer-events-none fixed inset-x-0 top-0 h-14 border-b border-white/40 bg-white/95 shadow-lg shadow-black/[0.03] dark:border-black/40 dark:bg-slate-950/95 sm:inset-x-auto sm:left-1/2 sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:-translate-x-1/2 sm:rounded-full sm:border" />
 
-      <nav className="fixed left-1/2 top-[0.15rem] z-10 flex h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-full max-w-full flex-wrap items-center justify-center gap-x-1 gap-y-1 px-2 text-[0.85rem] font-medium text-slate-500 sm:w-[initial] sm:flex-nowrap sm:gap-5 sm:px-0 sm:text-[0.9rem]">
+      <nav className="fixed inset-x-0 top-0 z-10 flex h-14 items-center justify-center px-2 sm:inset-x-auto sm:left-1/2 sm:top-[1.7rem] sm:h-[3.25rem] sm:w-[36rem] sm:-translate-x-1/2 sm:px-0">
+        <ul className="flex w-full max-w-full flex-nowrap items-center justify-between gap-0 sm:w-auto sm:justify-center sm:gap-5">
           {links.map((link) => (
             <li
-              className="relative flex h-3/4 items-center justify-center"
+              className="relative flex shrink-0 items-center justify-center"
               key={link.hash}
             >
               <button
                 type="button"
                 className={clsx(
-                  "flex w-full cursor-pointer items-center justify-center border-0 bg-transparent px-3 py-3 font-[inherit] text-inherit hover:text-teal-600 dark:text-slate-500 dark:hover:text-teal-200",
+                  "relative flex cursor-pointer items-center justify-center border-0 bg-transparent px-2.5 py-2 text-[0.8rem] font-medium text-slate-500 hover:text-teal-600 dark:text-slate-500 dark:hover:text-teal-200 sm:px-3 sm:py-3 sm:text-[0.9rem]",
                   {
                     "text-teal-500 dark:text-teal-400":
                       activeSection === link.name,

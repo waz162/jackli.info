@@ -49,9 +49,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
-        className={`${inter.className} bg-gray-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100`}
+        className={`${inter.className} overflow-x-hidden bg-gray-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100`}
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

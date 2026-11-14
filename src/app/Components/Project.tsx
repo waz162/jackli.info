@@ -14,6 +14,17 @@ export default function Project({
 }: ProjectProps) {
   const content = (
     <section className="relative mx-auto max-w-[42rem] overflow-hidden rounded-lg border border-slate-200 bg-slate-100 transition hover:border-teal-300/60 hover:bg-slate-200/80 dark:border-slate-700 dark:bg-slate-800/80 dark:text-white dark:hover:border-teal-500/40 dark:hover:bg-slate-700/90 sm:h-[20rem] sm:pr-8 sm:group-even:pl-8">
+      <div className="relative aspect-[16/10] w-full overflow-hidden sm:hidden">
+        <Image
+          src={imageUrl}
+          alt={title}
+          fill
+          sizes="(max-width: 640px) 100vw, 42rem"
+          quality={90}
+          className="object-cover object-top"
+        />
+      </div>
+
       <div className="flex h-full flex-col px-5 pb-7 pt-4 sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-[18rem]">
         <h3 className="text-2xl font-semibold text-slate-800 dark:text-slate-100">
           {title}
